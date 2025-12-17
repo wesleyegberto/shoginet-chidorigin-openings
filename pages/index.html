@@ -1,990 +1,320 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!doctype html>
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chidorigin's Senpou Zukan</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f4f4f9;
-        }
-        h1 {
-            color: #333;
-            text-align: center;
-            border-bottom: 2px solid #5cb85c;
-            padding-bottom: 10px;
-        }
-        table {
-            width: 90%;
-            margin: 20px auto;
-            border-collapse: collapse;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            background-color: white;
-        }
-        th, td {
-            padding: 12px 15px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-        th {
-            background-color: #5cb85c;
-            color: white;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-        tr:hover {
-            background-color: #f1f1f1;
-        }
-        td:first-child {
-            text-align: center;
-            width: 50px;
-            /* Garante que o índice não quebre */
-            white-space: nowrap;
-        }
-        a {
-            color: #4a90e2;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        a:hover {
-            text-decoration: underline;
-            color: #3470b4;
-        }
-        .chapter-header {
-            background-color: #d9edf7;
-            color: #31708f;
-            font-weight: bold;
-            text-align: center !important;
-        }
-    </style>
+  <meta charset="utf-8">
+  <title>Chidorigin's Senpou Zukan</title>
 </head>
+
 <body>
+  <h2>📚 Shogi Tactics and Opening</h2>
 
-    <h2>📚 Shogi Tactics and Opening</h2>
+  <h3>Contextualized Tactics</h3>
 
-    <table>
-        <thead>
-            <tr>
-                <th>#</th>
-                <th>Content</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="chapter-header">
-                <td><a href="tactics/tactics000/tactics000.html">0</a></td>
-                <td><a href="tactics/tactics000/tactics000.html">Introduction Chapter (序 章)</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics001/tactics001.html">1</a></td>
-                <td><a href="tactics/tactics001/tactics001.html">Opening Formation: Double Hanging Rook (序盤の形 相掛り)</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics002/tactics002.html">2</a></td>
-                <td><a href="tactics/tactics002/tactics002.html">Opening Formation: Yagura Castle (序盤の形 矢倉)</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics003/tactics003.html">3</a></td>
-                <td><a href="tactics/tactics003/tactics003.html">Opening Formation: Bishop Exchange (序盤の形 角換り)</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics004/tactics004.html">4</a></td>
-                <td><a href="tactics/tactics004/tactics004.html">Opening Formation: Side Pawn Capture (序盤の形 横歩取り)</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics005/tactics005.html">5</a></td>
-                <td><a href="tactics/tactics005/tactics005.html">Opening Formation: Ranging Rook (序盤の形 振り飛車)</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics006/tactics006.html">6</a></td>
-                <td><a href="tactics/tactics006/tactics006.html">Opening Formation: Double Ranging Rook (序盤の形 相振り飛車)</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics007/tactics007.html">7</a></td>
-                <td><a href="tactics/tactics007/tactics007.html">Climbing Silver Tactic (Double Hanging Rook style) (棒銀戦法（相掛り型）)</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics008/tactics008.html">8</a></td>
-                <td><a href="tactics/tactics008/tactics008.html">Central Rook Tactic (Primitive Style) (中飛車戦法（原始型）)</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics009/tactics009.html">9</a></td>
-                <td><a href="tactics/tactics009/tactics009.html">Three Great Principles of Piece Placement (駒組みの３大原則)</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics010/tactics010.html">10</a></td>
-                <td><a href="tactics/tactics010/tactics010.html">Yagura Tactic: Piece Placement Chapter (矢倉戦法 駒組み編)</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics011/tactics011.html">11</a></td>
-                <td><a href="tactics/tactics011/tactics011.html">Yagura Tactic: Fighting Chapter (矢倉戦法 戦闘編 ) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics012/tactics012.html">12</a></td>
-                <td><a href="tactics/tactics012/tactics012.html">Yagura Tactic: Fighting Chapter (矢倉戦法 戦闘編) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics013/tactics013.html">13</a></td>
-                <td><a href="tactics/tactics013/tactics013.html">Fourth File Rook Tactic: Piece Placement Chapter (四間飛車戦法 駒組み編)</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics014/tactics014.html">14</a></td>
-                <td><a href="tactics/tactics014/tactics014.html">Fourth File Rook Tactic: Fighting Chapter (四間飛車戦法 戦闘編) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics015/tactics015.html">15</a></td>
-                <td><a href="tactics/tactics015/tactics015.html">Fourth File Rook Tactic: Fighting Chapter (四間飛車戦法 戦闘編) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics016/tactics016.html">16</a></td>
-                <td><a href="tactics/tactics016/tactics016.html">Quick Ishida Tactic (早石田戦法) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics017/tactics017.html">17</a></td>
-                <td><a href="tactics/tactics017/tactics017.html">Quick Ishida Tactic (早石田戦法) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics018/tactics018.html">18</a></td>
-                <td><a href="tactics/tactics018/tactics018.html">Masuda Style Ishida Tactic (升田式石田流) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics019/tactics019.html">19</a></td>
-                <td><a href="tactics/tactics019/tactics019.html">Masuda Style Ishida Tactic (升田式石田流) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics020/tactics020.html">20</a></td>
-                <td><a href="tactics/tactics020/tactics020.html">Demon Killer Tactic (鬼殺し戦法) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics021/tactics021.html">21</a></td>
-                <td><a href="tactics/tactics021/tactics021.html">Demon Killer Tactic (鬼殺し戦法) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics022/tactics022.html">22</a></td>
-                <td><a href="tactics/tactics022/tactics022.html">New Demon Killer Tactic (新鬼殺し戦法)</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics023/tactics023.html">23</a></td>
-                <td><a href="tactics/tactics023/tactics023.html">Vertical Pawn Capture Tactic (縦歩取り戦法) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics024/tactics024.html">24</a></td>
-                <td><a href="tactics/tactics024/tactics024.html">Vertical Pawn Capture Tactic (縦歩取り戦法) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics025/tactics025.html">25</a></td>
-                <td><a href="tactics/tactics025/tactics025.html">Vertical Pawn Capture Tactic (縦歩取り戦法[３]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics026/tactics026.html">26</a></td>
-                <td><a href="tactics/tactics026/tactics026.html">Vertical Pawn Capture Tactic (縦歩取り戦法[４]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics027/tactics027.html">27</a></td>
-                <td><a href="tactics/tactics027/tactics027.html">Twisting Rook Tactic (ひねり飛車戦法) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics028/tactics028.html">28</a></td>
-                <td><a href="tactics/tactics028/tactics028.html">Twisting Rook Tactic (ひねり飛車戦法) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics029/tactics029.html">29</a></td>
-                <td><a href="tactics/tactics029/tactics029.html">Double Hanging Rook: Pushing Pawn ▲15 Pawn over the line (相掛り ▲15 歩突き越し型)</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics030/tactics030.html">30</a></td>
-                <td><a href="tactics/tactics030/tactics030.html">Double Hanging Rook: Gote's 16th Move Choice (相掛り 後手１６手目の選択)</a></td>
-            </tr>
-            <tr class="chapter-header">
-                <td colspan="2">Side Pawn Capture (Yoko-fudori) Strategies</td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics031/tactics031.html">31</a></td>
-                <td><a href="tactics/tactics031/tactics031.html">Side Pawn Capture Tactic (横歩取り戦法) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics032/tactics032.html">32</a></td>
-                <td><a href="tactics/tactics032/tactics032.html">Side Pawn Capture Tactic (横歩取り戦法) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics033/tactics033.html">33</a></td>
-                <td><a href="tactics/tactics033/tactics033.html">Side Pawn Capture: Quick Attack against Gote's ▽86 Pawn formation (横歩取り 後手▽86 歩型への速攻)</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics034/tactics034.html">34</a></td>
-                <td><a href="tactics/tactics034/tactics034.html">Side Pawn Capture: Gote's ▽45 Bishop Tactic (横歩取り▽45 角戦法) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics035/tactics035.html">35</a></td>
-                <td><a href="tactics/tactics035/tactics035.html">Side Pawn Capture: Gote's ▽45 Bishop Tactic (横歩取り▽45 角戦法) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics036/tactics036.html">36</a></td>
-                <td><a href="tactics/tactics036/tactics036.html">Side Pawn Capture: Gote's ▽45 Bishop Tactic (横歩取り▽45 角戦法[３]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics037/tactics037.html">37</a></td>
-                <td><a href="tactics/tactics037/tactics037.html">Side Pawn Capture: Gote's ▽38 Pawn Tactic (横歩取り▽38 歩戦法) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics038/tactics038.html">38</a></td>
-                <td><a href="tactics/tactics038/tactics038.html">Side Pawn Capture: Gote's ▽38 Pawn Tactic (横歩取り▽38 歩戦法) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics039/tactics039.html">39</a></td>
-                <td><a href="tactics/tactics039/tactics039.html">Double Side Pawn Capture Tactic (相横歩取り戦法) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics040/tactics040.html">40</a></td>
-                <td><a href="tactics/tactics040/tactics040.html">Double Side Pawn Capture Tactic (相横歩取り戦法) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics041/tactics041.html">41</a></td>
-                <td><a href="tactics/tactics041/tactics041.html">Side Pawn Capture: Gote's ▽33 Bishop Air Battle Tactic (横歩取り▽33 角空中戦法) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics042/tactics042.html">42</a></td>
-                <td><a href="tactics/tactics042/tactics042.html">Side Pawn Capture: Gote's ▽33 Bishop Air Battle Tactic (横歩取り▽33 角空中戦法) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics043/tactics043.html">43</a></td>
-                <td><a href="tactics/tactics043/tactics043.html">Side Pawn Capture: Nakahara Style ▽41 King (横歩取り 中原流▽41 玉)</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics044/tactics044.html">44</a></td>
-                <td><a href="tactics/tactics044/tactics044.html">Side Pawn Capture: Gote's ▽85 Rook Strategy (横歩取り▽85 飛戦法) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics045/tactics045.html">45</a></td>
-                <td><a href="tactics/tactics045/tactics045.html">Side Pawn Capture: Gote's ▽85 Rook Strategy (横歩取り▽85 飛戦法) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics046/tactics046.html">46</a></td>
-                <td><a href="tactics/tactics046/tactics046.html">Side Pawn Capture: Gote's ▽33 Knight Tactic (横歩取り▽33 桂戦法)</a></td>
-            </tr>
-            <tr class="chapter-header">
-                <td colspan="2">Other Ranging Rook (Furibisha) Tactics</td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics047/tactics047.html">47</a></td>
-                <td><a href="tactics/tactics047/tactics047.html">Eishun Style 19-Move Joseki (英春流１９手定跡)</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics048/tactics048.html">48</a></td>
-                <td><a href="tactics/tactics048/tactics048.html">No Guard Tactic (ノーガード戦法) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics049/tactics049.html">49</a></td>
-                <td><a href="tactics/tactics049/tactics049.html">No Guard Tactic (ノーガード戦法) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics050/tactics050.html">50</a></td>
-                <td><a href="tactics/tactics050/tactics050.html">Opposite Rook Tactic (向かい飛車戦法) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics051/tactics051.html">51</a></td>
-                <td><a href="tactics/tactics051/tactics051.html">Opposite Rook Tactic (向かい飛車戦法) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics052/tactics052.html">52</a></td>
-                <td><a href="tactics/tactics052/tactics052.html">Opposite Rook Tactic (向かい飛車戦法[３]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics053/tactics053.html">53</a></td>
-                <td><a href="tactics/tactics053/tactics053.html">Sakata Style Opposite Rook Tactic (阪田流向かい飛車戦法)</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics054/tactics054.html">54</a></td>
-                <td><a href="tactics/tactics054/tactics054.html">Demon Killer Opposite Rook Tactic (鬼殺し向かい飛車戦法) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics055/tactics055.html">55</a></td>
-                <td><a href="tactics/tactics055/tactics055.html">Demon Killer Opposite Rook Tactic (鬼殺し向かい飛車戦法) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics056/tactics056.html">56</a></td>
-                <td><a href="tactics/tactics056/tactics056.html">4th Move ▽33 Bishop Opposite Rook Tactic (４手目▽33 角型向かい飛車戦法) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics057/tactics057.html">57</a></td>
-                <td><a href="tactics/tactics057/tactics057.html">4th Move ▽33 Bishop Opposite Rook Tactic (４手目▽33 角型向かい飛車戦法) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics058/tactics058.html">58</a></td>
-                <td><a href="tactics/tactics058/tactics058.html">Sente's Attacking Opposite Rook (先手の攻める向かい飛車) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics059/tactics059.html">59</a></td>
-                <td><a href="tactics/tactics059/tactics059.html">Sente's Attacking Opposite Rook (先手の攻める向かい飛車) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics060/tactics060.html">60</a></td>
-                <td><a href="tactics/tactics060/tactics060.html">Meriken Opposite Rook Tactic (メリケン向かい飛車戦法) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics061/tactics061.html">61</a></td>
-                <td><a href="tactics/tactics061/tactics061.html">Meriken Opposite Rook Tactic (メリケン向かい飛車戦法) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics062/tactics062.html">62</a></td>
-                <td><a href="tactics/tactics062/tactics062.html">Floating Rook Blinding Tactic (浮き飛車目くらまし戦法)</a></td>
-            </tr>
-            <tr class="chapter-header">
-                <td colspan="2">Central Rook (Nakabisha) Strategies</td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics063/tactics063.html">63</a></td>
-                <td><a href="tactics/tactics063/tactics063.html">Horn Silver Central Rook Tactic (ツノ銀中飛車戦法) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics064/tactics064.html">64</a></td>
-                <td><a href="tactics/tactics064/tactics064.html">Horn Silver Central Rook Tactic (ツノ銀中飛車戦法) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics065/tactics065.html">65</a></td>
-                <td><a href="tactics/tactics065/tactics065.html">Pinwheel Tactic (Kazaguruma) (風車戦法) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics066/tactics066.html">66</a></td>
-                <td><a href="tactics/tactics066/tactics066.html">Pinwheel Tactic (Kazaguruma) (風車戦法) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics067/tactics067.html">67</a></td>
-                <td><a href="tactics/tactics067/tactics067.html">Sente's Attacking Central Rook (先手の攻める中飛車) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics068/tactics068.html">68</a></td>
-                <td><a href="tactics/tactics068/tactics068.html">Sente's Attacking Central Rook (先手の攻める中飛車) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics069/tactics069.html">69</a></td>
-                <td><a href="tactics/tactics069/tactics069.html">Sente's Attacking Central Rook (先手の攻める中飛車[３]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics070/tactics070.html">70</a></td>
-                <td><a href="tactics/tactics070/tactics070.html">$55$ Dragon Central Rook Tactic (５五龍中飛車戦法)</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics071/tactics071.html">71</a></td>
-                <td><a href="tactics/tactics071/tactics071.html">Flounder Tactic (Hirame) (ヒラメ戦法) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics072/tactics072.html">72</a></td>
-                <td><a href="tactics/tactics072/tactics072.html">Flounder Tactic (Hirame) (ヒラメ戦法) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics073/tactics073.html">73</a></td>
-                <td><a href="tactics/tactics073/tactics073.html">Gokigen Central Rook Tactic (ゴキゲン中飛車戦法) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics074/tactics074.html">74</a></td>
-                <td><a href="tactics/tactics074/tactics074.html">Gokigen Central Rook Tactic (ゴキゲン中飛車戦法) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics075/tactics075.html">75</a></td>
-                <td><a href="tactics/tactics075/tactics075.html">Gokigen Central Rook Tactic (ゴキゲン中飛車戦法[３]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics076/tactics076.html">76</a></td>
-                <td><a href="tactics/tactics076/tactics076.html">Gokigen Central Rook Tactic (ゴキゲン中飛車戦法[４]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics077/tactics077.html">77</a></td>
-                <td><a href="tactics/tactics077/tactics077.html">Gokigen Central Rook: Countermeasure vs. Sente's Quick Attack (ゴキゲン中飛車 対先手急戦策)</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics078/tactics078.html">78</a></td>
-                <td><a href="tactics/tactics078/tactics078.html">Gokigen Central Rook: Countermeasure vs. Sente's Positional Attack (ゴキゲン中飛車 対先手持久戦策)</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics079/tactics079.html">79</a></td>
-                <td><a href="tactics/tactics079/tactics079.html">Gokigen Central Rook: Floating Rook style (ゴキゲン中飛車 浮き飛車型)</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics080/tactics080.html">80</a></td>
-                <td><a href="tactics/tactics080/tactics080.html">Sente's Gokigen Central Rook (先手のゴキゲン中飛車) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics081/tactics081.html">81</a></td>
-                <td><a href="tactics/tactics081/tactics081.html">Sente's Gokigen Central Rook (先手のゴキゲン中飛車) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics082/tactics082.html">82</a></td>
-                <td><a href="tactics/tactics082/tactics082.html">Sente's Gokigen Central Rook (先手のゴキゲン中飛車[３]</a></td>
-            </tr>
-            <tr class="chapter-header">
-                <td colspan="2">Bishop Exchange (Kakugawari) Strategies</td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics083/tactics083.html">83</a></td>
-                <td><a href="tactics/tactics083/tactics083.html">Wrong Diagonal Bishop Tactic (筋違い角戦法) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics084/tactics084.html">84</a></td>
-                <td><a href="tactics/tactics084/tactics084.html">Wrong Diagonal Bishop Tactic (筋違い角戦法) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics085/tactics085.html">85</a></td>
-                <td><a href="tactics/tactics085/tactics085.html">Bishop Exchange: Opening Transitions (角換り 序盤の変遷)</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics086/tactics086.html">86</a></td>
-                <td><a href="tactics/tactics086/tactics086.html">Bishop Exchange: Opening Common Sense (角換り 序盤の常識)</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics087/tactics087.html">87</a></td>
-                <td><a href="tactics/tactics087/tactics087.html">Bishop Exchange: 3 Main Tactics (角換り 主要３戦法)</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics088/tactics088.html">88</a></td>
-                <td><a href="tactics/tactics088/tactics088.html">Bishop Exchange: Other Tactics (角換り その他の戦法)</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics089/tactics089.html">89</a></td>
-                <td><a href="tactics/tactics089/tactics089.html">Bishop Exchange Climbing Silver Tactic (角換り棒銀戦法) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics090/tactics090.html">90</a></td>
-                <td><a href="tactics/tactics090/tactics090.html">Bishop Exchange Climbing Silver Tactic (角換り棒銀戦法) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics091/tactics091.html">91</a></td>
-                <td><a href="tactics/tactics091/tactics091.html">Bishop Exchange Climbing Silver Tactic (角換り棒銀戦法[３]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics092/tactics092.html">92</a></td>
-                <td><a href="tactics/tactics092/tactics092.html">Bishop Exchange Climbing Silver Tactic (角換り棒銀戦法[４]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics093/tactics093.html">93</a></td>
-                <td><a href="tactics/tactics093/tactics093.html">Quick Advancing Silver Tactic (早繰り銀戦法) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics094/tactics094.html">94</a></td>
-                <td><a href="tactics/tactics094/tactics094.html">Quick Advancing Silver Tactic (早繰り銀戦法) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics095/tactics095.html">95</a></td>
-                <td><a href="tactics/tactics095/tactics095.html">Quick Advancing Silver Tactic (早繰り銀戦法[３]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics096/tactics096.html">96</a></td>
-                <td><a href="tactics/tactics096/tactics096.html">Quick Advancing Silver Tactic (早繰り銀戦法[４]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics097/tactics097.html">97</a></td>
-                <td><a href="tactics/tactics097/tactics097.html">Bishop Exchange Sitting Silver: Kimura Joseki (角換り腰掛け銀 木村定跡)</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics098/tactics098.html">98</a></td>
-                <td><a href="tactics/tactics098/tactics098.html">Bishop Exchange Sitting Silver: Gote's All-Out Defense Style (角換り腰掛け銀 後手専守防衛型) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics099/tactics099.html">99</a></td>
-                <td><a href="tactics/tactics099/tactics099.html">Bishop Exchange Sitting Silver: Gote's All-Out Defense Style (角換り腰掛け銀 後手専守防衛型) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics100/tactics100.html">100</a></td>
-                <td><a href="tactics/tactics100/tactics100.html">Bishop Exchange Sitting Silver: Sente/Gote Same Formation (角換り腰掛け銀 先後同型) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics101/tactics101.html">101</a></td>
-                <td><a href="tactics/tactics101/tactics101.html">Bishop Exchange Sitting Silver: Sente/Gote Same Formation (角換り腰掛け銀 先後同型) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics102/tactics102.html">102</a></td>
-                <td><a href="tactics/tactics102/tactics102.html">Bishop Exchange Sitting Silver: Sente/Gote Same Formation (角換り腰掛け銀 先後同型[３]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics103/tactics103.html">103</a></td>
-                <td><a href="tactics/tactics103/tactics103.html">Bishop Exchange Sitting Silver: Sente/Gote Same Formation (角換り腰掛け銀 先後同型[４]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics104/tactics104.html">104</a></td>
-                <td><a href="tactics/tactics104/tactics104.html">Bishop Exchange Sitting Silver: Counter vs. Gote's Climbing Silver (角換り腰掛け銀 対後手棒銀) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics105/tactics105.html">105</a></td>
-                <td><a href="tactics/tactics105/tactics105.html">Bishop Exchange Sitting Silver: Counter vs. Gote's Climbing Silver (角換り腰掛け銀 対後手棒銀) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics106/tactics106.html">106</a></td>
-                <td><a href="tactics/tactics106/tactics106.html">Gote's One-Tempo Loss Bishop Exchange (後手一手損角換り)</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics107/tactics107.html">107</a></td>
-                <td><a href="tactics/tactics107/tactics107.html">Bishop Exchange: Variation Tactics (角換り 変化戦術) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics108/tactics108.html">108</a></td>
-                <td><a href="tactics/tactics108/tactics108.html">Bishop Exchange: Variation Tactics (角換り 変化戦術) [2]</a></td>
-            </tr>
-            <tr class="chapter-header">
-                <td colspan="2">Double Ranging Rook (Ai-Furibisha) Strategies</td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics109/tactics109.html">109</a></td>
-                <td><a href="tactics/tactics109/tactics109.html">Double Ranging Rook: Dangerous Opening (相振り飛車 危険な序盤) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics110/tactics110.html">110</a></td>
-                <td><a href="tactics/tactics110/tactics110.html">Double Ranging Rook: Dangerous Opening (相振り飛車 危険な序盤) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics111/tactics111.html">111</a></td>
-                <td><a href="tactics/tactics111/tactics111.html">Double Ranging Rook: Opposite Rook vs. Third File Rook (相振り飛車 向かい飛車vs三間飛車) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics112/tactics112.html">112</a></td>
-                <td><a href="tactics/tactics112/tactics112.html">Double Ranging Rook: Opposite Rook vs. Third File Rook (相振り飛車 向かい飛車vs三間飛車) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics113/tactics113.html">113</a></td>
-                <td><a href="tactics/tactics113/tactics113.html">Double Ranging Rook: Opposite Rook vs. Third File Rook (相振り飛車 向かい飛車vs三間飛車[３]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics114/tactics114.html">114</a></td>
-                <td><a href="tactics/tactics114/tactics114.html">Double Ranging Rook: Opposite Rook vs. Third File Rook (相振り飛車 向かい飛車vs三間飛車[４]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics115/tactics115.html">115</a></td>
-                <td><a href="tactics/tactics115/tactics115.html">Double Ranging Rook: Opposite Rook vs. Fourth File Rook (相振り飛車 向かい飛車vs四間飛車)</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics116/tactics116.html">116</a></td>
-                <td><a href="tactics/tactics116/tactics116.html">Double Ranging Rook: Opposite Rook vs. Central Rook (相振り飛車 向かい飛車vs中飛車) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics117/tactics117.html">117</a></td>
-                <td><a href="tactics/tactics117/tactics117.html">Double Ranging Rook: Opposite Rook vs. Central Rook (相振り飛車 向かい飛車vs中飛車) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics118/tactics118.html">118</a></td>
-                <td><a href="tactics/tactics118/tactics118.html">Double Ranging Rook: Opposite Rook vs. Opposite Rook (相振り飛車 向かい飛車vs向かい飛車) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics119/tactics119.html">119</a></td>
-                <td><a href="tactics/tactics119/tactics119.html">Double Ranging Rook: Opposite Rook vs. Opposite Rook (相振り飛車 向かい飛車vs向かい飛車) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics120/tactics120.html">120</a></td>
-                <td><a href="tactics/tactics120/tactics120.html">Double Ranging Rook: Opposite Rook vs. Opposite Rook (相振り飛車 向かい飛車vs向かい飛車[３]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics121/tactics121.html">121</a></td>
-                <td><a href="tactics/tactics121/tactics121.html">Double Ranging Rook: Opposite Rook vs. Opposite Rook (相振り飛車 向かい飛車vs向かい飛車[４]</a></td>
-            </tr>
-            <tr class="chapter-header">
-                <td colspan="2">Advanced Static Rook (Ibisha) Tactics (Yagura, etc.)</td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics122/tactics122.html">122</a></td>
-                <td><a href="tactics/tactics122/tactics122.html">Double Full Yagura: Sen'nichite (Repetition) Verification (相総矢倉 千日手の検証) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics123/tactics123.html">123</a></td>
-                <td><a href="tactics/tactics123/tactics123.html">Double Full Yagura: Sen'nichite (Repetition) Verification (相総矢倉 千日手の検証) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics124/tactics124.html">124</a></td>
-                <td><a href="tactics/tactics124/tactics124.html">Double Full Yagura: Sen'nichite (Repetition) Verification (相総矢倉 千日手の検証[３]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics125/tactics125.html">125</a></td>
-                <td><a href="tactics/tactics125/tactics125.html">Yagura: Gote's Ultra Quick Attack Climbing Silver (矢倉 後手超急戦棒銀) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics126/tactics126.html">126</a></td>
-                <td><a href="tactics/tactics126/tactics126.html">Yagura: Gote's Ultra Quick Attack Climbing Silver (矢倉 後手超急戦棒銀) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics127/tactics127.html">127</a></td>
-                <td><a href="tactics/tactics127/tactics127.html">Yagura: ▲37 Silver Strategy (矢倉 ▲37 銀戦法)</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics128/tactics128.html">128</a></td>
-                <td><a href="tactics/tactics128/tactics128.html">Yagura: ▲35 Pawn Quick Maneuver (矢倉 ▲35 歩早仕掛け)</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics129/tactics129.html">129</a></td>
-                <td><a href="tactics/tactics129/tactics129.html">Yagura: Sparrow Killing Tactic (Suzumezashi) (矢倉 スズメ刺し戦法)</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics130/tactics130.html">130</a></td>
-                <td><a href="tactics/tactics130/tactics130.html">Yagura: Right Fourth File Rook Tactic (Migishikenbisha) (矢倉 右四間飛車戦法)</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics131/tactics131.html">131</a></td>
-                <td><a href="tactics/tactics131/tactics131.html">Yagura Central Rook Tactic (矢倉中飛車戦法)</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics132/tactics132.html">132</a></td>
-                <td><a href="tactics/tactics132/tactics132.html">Yonenaga Style Quick Attack Yagura (米長流急戦矢倉)</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics133/tactics133.html">133</a></td>
-                <td><a href="tactics/tactics133/tactics133.html">Yagura: Morishita System (矢倉 森下システム) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics134/tactics134.html">134</a></td>
-                <td><a href="tactics/tactics134/tactics134.html">Yagura: Morishita System (矢倉 森下システム) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics135/tactics135.html">135</a></td>
-                <td><a href="tactics/tactics135/tactics135.html">Yagura: Morishita System (矢倉 森下システム) [3]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics136/tactics136.html">136</a></td>
-                <td><a href="tactics/tactics136/tactics136.html">Yagura: Waki System (矢倉 脇システム)</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics137/tactics137.html">137</a></td>
-                <td><a href="tactics/tactics137/tactics137.html">Gangi Castle Tactic (雁木戦法)</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics138/tactics138.html">138</a></td>
-                <td><a href="tactics/tactics138/tactics138.html">Crab-Crab Silver Tactic (Kani-kani Gin) (カニカニ銀戦法)</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics139/tactics139.html">139</a></td>
-                <td><a href="tactics/tactics139/tactics139.html">$57$ Left Silver Style Diagonal Climbing Silver (５七銀左型ナナメ棒銀) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics140/tactics140.html">140</a></td>
-                <td><a href="tactics/tactics140/tactics140.html">$57$ Left Silver Style Diagonal Climbing Silver (５七銀左型ナナメ棒銀) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics141/tactics141.html">141</a></td>
-                <td><a href="tactics/tactics141/tactics141.html">$57$ Left Silver Style Edge Bishop Tactic (５七銀左型端角戦法) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics142/tactics142.html">142</a></td>
-                <td><a href="tactics/tactics142/tactics142.html">$57$ Left Silver Style Edge Bishop Tactic (５七銀左型端角戦法) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics143/tactics143.html">143</a></td>
-                <td><a href="tactics/tactics143/tactics143.html">Saginomiya Joseki (鷺宮定跡) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics144/tactics144.html">144</a></td>
-                <td><a href="tactics/tactics144/tactics144.html">Saginomiya Joseki (鷺宮定跡) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics145/tactics145.html">145</a></td>
-                <td><a href="tactics/tactics145/tactics145.html">Saginomiya Joseki (鷺宮定跡) [3]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics146/tactics146.html">146</a></td>
-                <td><a href="tactics/tactics146/tactics146.html">Saginomiya Joseki (鷺宮定跡) [4]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics147/tactics147.html">147</a></td>
-                <td><a href="tactics/tactics147/tactics147.html">Nakahara Style Edge Bishop Tactic (中原流端角戦法)</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics148/tactics148.html">148</a></td>
-                <td><a href="tactics/tactics148/tactics148.html">▲46 Silver Strategy (Left Silver Style) (▲46 銀戦法(左銀型)) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics149/tactics149.html">149</a></td>
-                <td><a href="tactics/tactics149/tactics149.html">▲46 Silver Strategy (Left Silver Style) (▲46 銀戦法(左銀型)) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics150/tactics150.html">150</a></td>
-                <td><a href="tactics/tactics150/tactics150.html">▲46 Silver Strategy (Left Silver Style) (▲46 銀戦法(左銀型)) [3]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics151/tactics151.html">151</a></td>
-                <td><a href="tactics/tactics151/tactics151.html">▲46 Silver Strategy (Right Silver Style) (▲46 銀戦法(右銀型)) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics152/tactics152.html">152</a></td>
-                <td><a href="tactics/tactics152/tactics152.html">▲46 Silver Strategy (Right Silver Style) (▲46 銀戦法(右銀型)) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics153/tactics153.html">153</a></td>
-                <td><a href="tactics/tactics153/tactics153.html">▲57 Silver Right Style ▲38 Rook Strategy (▲57 銀右型 ▲38 飛戦法) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics154/tactics154.html">154</a></td>
-                <td><a href="tactics/tactics154/tactics154.html">▲57 Silver Right Style ▲38 Rook Strategy (▲57 銀右型 ▲38 飛戦法) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics155/tactics155.html">155</a></td>
-                <td><a href="tactics/tactics155/tactics155.html">▲57 Silver Left Style ▲45 Pawn Quick Maneuver (▲57 銀左型 ▲45 歩早仕掛け) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics156/tactics156.html">156</a></td>
-                <td><a href="tactics/tactics156/tactics156.html">▲57 Silver Left Style ▲45 Pawn Quick Maneuver (▲57 銀左型 ▲45 歩早仕掛け) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics157/tactics157.html">157</a></td>
-                <td><a href="tactics/tactics157/tactics157.html">▲57 Silver Left Style ▲45 Pawn Quick Maneuver (▲57 銀左型 ▲45 歩早仕掛け) [3]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics158/tactics158.html">158</a></td>
-                <td><a href="tactics/tactics158/tactics158.html">▲57 Silver Left Style ▲45 Pawn Quick Maneuver (▲57 銀左型 ▲45 歩早仕掛け) [4]</a></td>
-            </tr>
-            <tr class="chapter-header">
-                <td colspan="2">Counter Ranging Rook (Anti-Furibisha)</td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics159/tactics159.html">159</a></td>
-                <td><a href="tactics/tactics159/tactics159.html">Counter vs. Third File Rook: ▲45 Pawn Quick Maneuver (対三間飛車▲45 歩早仕掛け) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics160/tactics160.html">160</a></td>
-                <td><a href="tactics/tactics160/tactics160.html">Counter vs. Third File Rook: ▲45 Pawn Quick Maneuver (対三間飛車▲45 歩早仕掛け) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics161/tactics161.html">161</a></td>
-                <td><a href="tactics/tactics161/tactics161.html">Counter vs. Third File Rook: ▲45 Pawn Quick Maneuver (対三間飛車▲45 歩早仕掛け) [3]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics162/tactics162.html">162</a></td>
-                <td><a href="tactics/tactics162/tactics162.html">Counter vs. Third File Rook: ▲45 Pawn Quick Maneuver (対三間飛車▲45 歩早仕掛け) [4]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics163/tactics163.html">163</a></td>
-                <td><a href="tactics/tactics163/tactics163.html">Counter vs. Fourth File Rook: Climbing Silver Tactic (対四間飛車棒銀戦法) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics164/tactics164.html">164</a></td>
-                <td><a href="tactics/tactics164/tactics164.html">Counter vs. Fourth File Rook: Climbing Silver Tactic (対四間飛車棒銀戦法) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics165/tactics165.html">165</a></td>
-                <td><a href="tactics/tactics165/tactics165.html">Counter vs. Fourth File Rook: Climbing Silver Tactic (対四間飛車棒銀戦法) [3]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics166/tactics166.html">166</a></td>
-                <td><a href="tactics/tactics166/tactics166.html">Counter vs. Fourth File Rook: Climbing Silver Tactic (対四間飛車棒銀戦法) [4]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics167/tactics167.html">167</a></td>
-                <td><a href="tactics/tactics167/tactics167.html">Counter vs. Fourth File Rook: Climbing Silver Tactic (対四間飛車棒銀戦法) [5]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics168/tactics168.html">168</a></td>
-                <td><a href="tactics/tactics168/tactics168.html">Counter vs. Fourth File Rook: Climbing Silver Tactic (対四間飛車棒銀戦法) [6]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics169/tactics169.html">169</a></td>
-                <td><a href="tactics/tactics169/tactics169.html">Counter vs. Fourth File Rook: Climbing Silver Tactic (対四間飛車棒銀戦法) [7]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics170/tactics170.html">170</a></td>
-                <td><a href="tactics/tactics170/tactics170.html">Counter vs. Fourth File Rook: Climbing Silver Tactic (対四間飛車棒銀戦法) [8]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics171/tactics171.html">171</a></td>
-                <td><a href="tactics/tactics171/tactics171.html">▽41 Gold Fourth File Rook Style (▽41 金型四間飛車) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics172/tactics172.html">172</a></td>
-                <td><a href="tactics/tactics172/tactics172.html">▽41 Gold Fourth File Rook Style (▽41 金型四間飛車) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics173/tactics173.html">173</a></td>
-                <td><a href="tactics/tactics173/tactics173.html">▽41 Gold Fourth File Rook Style (▽41 金型四間飛車) [3]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics174/tactics174.html">174</a></td>
-                <td><a href="tactics/tactics174/tactics174.html">▽41 Gold Fourth File Rook Style (▽41 金型四間飛車) [4]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics175/tactics175.html">175</a></td>
-                <td><a href="tactics/tactics175/tactics175.html">Counter vs. Fourth File Rook: Taking 5th File Rank (対四間飛車５筋位取り) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics176/tactics176.html">176</a></td>
-                <td><a href="tactics/tactics176/tactics176.html">Counter vs. Fourth File Rook: Taking 5th File Rank (対四間飛車５筋位取り) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics177/tactics177.html">177</a></td>
-                <td><a href="tactics/tactics177/tactics177.html">Counter vs. Fourth File Rook: Taking 5th File Rank (対四間飛車５筋位取り) [3]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics178/tactics178.html">178</a></td>
-                <td><a href="tactics/tactics178/tactics178.html">Counter vs. Fourth File Rook: Taking 5th File Rank (対四間飛車５筋位取り) [4]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics179/tactics179.html">179</a></td>
-                <td><a href="tactics/tactics179/tactics179.html">Kamaitachi (Sickle Weasel) Tactic (かまいたち戦法) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics180/tactics180.html">180</a></td>
-                <td><a href="tactics/tactics180/tactics180.html">Kamaitachi (Sickle Weasel) Tactic (かまいたち戦法) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics181/tactics181.html">181</a></td>
-                <td><a href="tactics/tactics181/tactics181.html">Bird-Stabbing Tactic (Torizashi) (鳥刺し戦法) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics182/tactics182.html">182</a></td>
-                <td><a href="tactics/tactics182/tactics182.html">Bird-Stabbing Tactic (Torizashi) (鳥刺し戦法) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics183/tactics183.html">183</a></td>
-                <td><a href="tactics/tactics183/tactics183.html">King's Head Rank Taker Tactic (玉頭位取り戦法) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics184/tactics184.html">184</a></td>
-                <td><a href="tactics/tactics184/tactics184.html">King's Head Rank Taker Tactic (玉頭位取り戦法) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics185/tactics185.html">185</a></td>
-                <td><a href="tactics/tactics185/tactics185.html">King's Head Rank Taker Tactic (玉頭位取り戦法) [3]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics186/tactics186.html">186</a></td>
-                <td><a href="tactics/tactics186/tactics186.html">King's Head Rank Taker Tactic (玉頭位取り戦法) [4]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics187/tactics187.html">187</a></td>
-                <td><a href="tactics/tactics187/tactics187.html">Counter vs. Fourth File Rook: Left Mino Castle (対四間飛車左美濃) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics188/tactics188.html">188</a></td>
-                <td><a href="tactics/tactics188/tactics188.html">Counter vs. Fourth File Rook: Left Mino Castle (対四間飛車左美濃) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics189/tactics189.html">189</a></td>
-                <td><a href="tactics/tactics189/tactics189.html">Fujii System vs. Left Mino Castle (藤井システムVS左美濃) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics190/tactics190.html">190</a></td>
-                <td><a href="tactics/tactics190/tactics190.html">Fujii System vs. Left Mino Castle (藤井システムVS左美濃) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics191/tactics191.html">191</a></td>
-                <td><a href="tactics/tactics191/tactics191.html">Fujii System vs. Left Mino Castle (藤井システムVS左美濃) [3]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics192/tactics192.html">192</a></td>
-                <td><a href="tactics/tactics192/tactics192.html">Fujii System vs. Left Mino Castle (藤井システムVS左美濃) [4]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics193/tactics193.html">193</a></td>
-                <td><a href="tactics/tactics193/tactics193.html">Fujii System vs. Left Mino Castle (藤井システムVS左美濃) [5]</a></td>
-            </tr>
-            <tr class="chapter-header">
-                <td colspan="2">Rook in the Hole (Anaguma) and System Strategies</td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics194/tactics194.html">194</a></td>
-                <td><a href="tactics/tactics194/tactics194.html">Static Rook in the Hole Tactic: Dawn Period (居飛車穴熊戦法 黎明期) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics195/tactics195.html">195</a></td>
-                <td><a href="tactics/tactics195/tactics195.html">Static Rook in the Hole Tactic: Dawn Period (居飛車穴熊戦法 黎明期) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics196/tactics196.html">196</a></td>
-                <td><a href="tactics/tactics196/tactics196.html">Static Rook in the Hole Tactic: Dawn Period (居飛車穴熊戦法 黎明期) [3]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics197/tactics197.html">197</a></td>
-                <td><a href="tactics/tactics197/tactics197.html">Fujii System vs. Static Rook in the Hole (藤井システムVS居飛車穴熊) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics198/tactics198.html">198</a></td>
-                <td><a href="tactics/tactics198/tactics198.html">Fujii System vs. Static Rook in the Hole (藤井システムVS居飛車穴熊) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics199/tactics199.html">199</a></td>
-                <td><a href="tactics/tactics199/tactics199.html">Fujii System vs. Static Rook in the Hole (藤井システムVS居飛車穴熊) [3]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics200/tactics200.html">200</a></td>
-                <td><a href="tactics/tactics200/tactics200.html">Fujii System vs. Static Rook in the Hole (藤井システムVS居飛車穴熊) [4]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics201/tactics201.html">201</a></td>
-                <td><a href="tactics/tactics201/tactics201.html">Sente's Fujii System (先手の藤井システム) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics202/tactics202.html">202</a></td>
-                <td><a href="tactics/tactics202/tactics202.html">Sente's Fujii System (先手の藤井システム) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics203/tactics203.html">203</a></td>
-                <td><a href="tactics/tactics203/tactics203.html">Sente's Fujii System (先手の藤井システム) [3]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics204/tactics204.html">204</a></td>
-                <td><a href="tactics/tactics204/tactics204.html">Sente's Fujii System (先手の藤井システム) [4]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics205/tactics205.html">205</a></td>
-                <td><a href="tactics/tactics205/tactics205.html">Sente's Fujii System vs. Gote's Quick Attack (先手の藤井システムvs後手急戦) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics206/tactics206.html">206</a></td>
-                <td><a href="tactics/tactics206/tactics206.html">Sente's Fujii System vs. Gote's Quick Attack (先手の藤井システムvs後手急戦) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics207/tactics207.html">207</a></td>
-                <td><a href="tactics/tactics207/tactics207.html">Kushikatsu (Skewered Cutlet) Castle (串カツ囲い)</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics208/tactics208.html">208</a></td>
-                <td><a href="tactics/tactics208/tactics208.html">Millennium Castle (ミレニアム) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics209/tactics209.html">209</a></td>
-                <td><a href="tactics/tactics209/tactics209.html">Millennium Castle (ミレニアム) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics210/tactics210.html">210</a></td>
-                <td><a href="tactics/tactics210/tactics210.html">Millennium Castle (ミレニアム) [3]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics211/tactics211.html">211</a></td>
-                <td><a href="tactics/tactics211/tactics211.html">Static Rook in the Hole vs. Fourth File Rook: Fierce Battle Period (居飛車穴熊vs四間飛車 激戦期) [1]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics212/tactics212.html">212</a></td>
-                <td><a href="tactics/tactics212/tactics212.html">Static Rook in the Hole vs. Fourth File Rook: Fierce Battle Period (居飛車穴熊vs四間飛車 激戦期) [2]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics213/tactics213.html">213</a></td>
-                <td><a href="tactics/tactics213/tactics213.html">Static Rook in the Hole vs. Fourth File Rook: Fierce Battle Period (居飛車穴熊vs四間飛車 激戦期) [3]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics214/tactics214.html">214</a></td>
-                <td><a href="tactics/tactics214/tactics214.html">Static Rook in the Hole vs. Fourth File Rook: Fierce Battle Period (居飛車穴熊vs四間飛車 激戦期) [4]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics215/tactics215.html">215</a></td>
-                <td><a href="tactics/tactics215/tactics215.html">Static Rook in the Hole vs. Fourth File Rook: Fierce Battle Period (居飛車穴熊vs四間飛車 激戦期) [5]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics216/tactics216.html">216</a></td>
-                <td><a href="tactics/tactics216/tactics216.html">Static Rook in the Hole vs. Fourth File Rook: Fierce Battle Period (居飛車穴熊vs四間飛車 激戦期) [6]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics217/tactics217.html">217</a></td>
-                <td><a href="tactics/tactics217/tactics217.html">Static Rook in the Hole vs. Fourth File Rook: Fierce Battle Period (居飛車穴熊vs四間飛車 激戦期) [7]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics218/tactics218.html">218</a></td>
-                <td><a href="tactics/tactics218/tactics218.html">Static Rook in the Hole vs. Fourth File Rook: Fierce Battle Period (居飛車穴熊vs四間飛車 激戦期) [8]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics219/tactics219.html">219</a></td>
-                <td><a href="tactics/tactics219/tactics219.html">Static Rook in the Hole vs. Fourth File Rook: Fierce Battle Period (居飛車穴熊vs四間飛車 激戦期) [9]</a></td>
-            </tr>
-            <tr>
-                <td><a href="tactics/tactics220/tactics220.html">220</a></td>
-                <td><a href="tactics/tactics220/tactics220.html">Static Rook in the Hole vs. Fourth File Rook: Fierce Battle Period (居飛車穴熊vs四間飛車 激戦期) [10]</a></td>
-            </tr>
-        </tbody>
-    </table>
+  <h4>Double Wing Attack (Aigakari, 相掛かり)</h4>
+  <ul>
+    <li><a href="tactics/tactics001/tactics001.html">Opening: Aigakari (序盤の形　相掛り)</a></li>
+    <li><a href="tactics/tactics007/tactics007.html">Climbing Silver (Aigakari type) (棒銀戦法（相掛り型）)</a></li>
+    <li><a href="tactics/tactics023/tactics023.html">Vertical Pawn Capture Strategy (縦歩取り戦法) [1]</a></li>
+    <li><a href="tactics/tactics024/tactics024.html">Vertical Pawn Capture Strategy (縦歩取り戦法) [2]</a></li>
+    <li><a href="tactics/tactics025/tactics025.html">Vertical Pawn Capture Strategy (縦歩取り戦法[３]</a></li>
+    <li><a href="tactics/tactics026/tactics026.html">Vertical Pawn Capture Strategy (縦歩取り戦法[４]</a></li>
+    <li><a href="tactics/tactics027/tactics027.html">Twisting Rook Strategy (ひねり飛車戦法) [1]</a></li>
+    <li><a href="tactics/tactics028/tactics028.html">Twisting Rook Strategy (ひねり飛車戦法) [2]</a></li>
+    <li><a href="tactics/tactics029/tactics029.html">Aigakari — Sente's ▲1-5 Pawn Overpush Variation (相掛り　▲１五歩突き越し型)</a></li>
+    <li><a href="tactics/tactics030/tactics030.html">Aigakari — Gote's 16th-move Choice (相掛り　後手１６手目の選択)</a></li>
+  </ul>
 
+
+  <h3>Full Book</h3>
+  <ol start="0">
+    <li><a href="tactics/tactics000/tactics000.html">Prologue (序 章)</a></li>
+    <li><a href="tactics/tactics001/tactics001.html">Opening: Aigakari (序盤の形　相掛り)</a></li>
+    <li><a href="tactics/tactics002/tactics002.html">Opening: Yagura (序盤の形　矢倉)</a></li>
+    <li><a href="tactics/tactics003/tactics003.html">Opening: Bishop Exchange (序盤の形　角換り)</a></li>
+    <li><a href="tactics/tactics004/tactics004.html">Opening: Side Pawn Capture (序盤の形　横歩取り)</a></li>
+    <li><a href="tactics/tactics005/tactics005.html">Opening: Ranging Rook (序盤の形　振り飛車)</a></li>
+    <li><a href="tactics/tactics006/tactics006.html">Opening: Double Ranging Rook (序盤の形　相振り飛車)</a></li>
+    <li><a href="tactics/tactics007/tactics007.html">Climbing Silver (Aigakari type) (棒銀戦法（相掛り型）)</a></li>
+    <li><a href="tactics/tactics008/tactics008.html">Central Rook (Primitive type) (中飛車戦法（原始型）)</a></li>
+    <li><a href="tactics/tactics009/tactics009.html">Three Major Principles of Piece Development (駒組みの３大原則)</a></li>
+    <li><a href="tactics/tactics010/tactics010.html">Yagura Strategy – Piece Development (矢倉戦法　駒組み編)</a></li>
+    <li><a href="tactics/tactics011/tactics011.html">Yagura Strategy – Combat (矢倉戦法　戦闘編) [1]</a></li>
+    <li><a href="tactics/tactics012/tactics012.html">Yagura Strategy – Combat (矢倉戦法　戦闘編) [2]</a></li>
+    <li><a href="tactics/tactics013/tactics013.html">Fourth-file Rook – Piece Development (四間飛車戦法　駒組み編)</a></li>
+    <li><a href="tactics/tactics014/tactics014.html">Fourth-file Rook – Combat (四間飛車戦法　戦闘編) [1]</a></li>
+    <li><a href="tactics/tactics015/tactics015.html">Fourth-file Rook – Combat (四間飛車戦法　戦闘編) [2]</a></li>
+    <li><a href="tactics/tactics016/tactics016.html">Quick Ishida Strategy (早石田戦法) [1]</a></li>
+    <li><a href="tactics/tactics017/tactics017.html">Quick Ishida Strategy (早石田戦法) [2]</a></li>
+    <li><a href="tactics/tactics018/tactics018.html">Masuda-style Ishida (升田式石田流) [1]</a></li>
+    <li><a href="tactics/tactics019/tactics019.html">Masuda-style Ishida (升田式石田流$&</a></li>
+    <li><a href="tactics/tactics020/tactics020.html">Oni-goroshi ("Demon Killer") Strategy (鬼殺し戦法) [1]</a></li>
+    <li><a href="tactics/tactics021/tactics021.html">Oni-goroshi ("Demon Killer") Strategy (鬼殺し戦法) [2]</a></li>
+    <li><a href="tactics/tactics022/tactics022.html">New Oni-goroshi Strategy (新鬼殺し戦法)</a></li>
+    <li><a href="tactics/tactics023/tactics023.html">Vertical Pawn Capture Strategy (縦歩取り戦法) [1]</a></li>
+    <li><a href="tactics/tactics024/tactics024.html">Vertical Pawn Capture Strategy (縦歩取り戦法) [2]</a></li>
+    <li><a href="tactics/tactics025/tactics025.html">Vertical Pawn Capture Strategy (縦歩取り戦法[３]</a></li>
+    <li><a href="tactics/tactics026/tactics026.html">Vertical Pawn Capture Strategy (縦歩取り戦法[４]</a></li>
+    <li><a href="tactics/tactics027/tactics027.html">Twisting Rook Strategy (ひねり飛車戦法) [1]</a></li>
+    <li><a href="tactics/tactics028/tactics028.html">Twisting Rook Strategy (ひねり飛車戦法) [2]</a></li>
+    <li><a href="tactics/tactics029/tactics029.html">Aigakari — Sente's ▲1-5 Pawn Overpush Variation (相掛り　▲１五歩突き越し型)</a>
+    </li>
+    <li><a href="tactics/tactics030/tactics030.html">Aigakari — Gote's 16th-move Choice (相掛り　後手１６手目の選択)</a></li>
+    <li><a href="tactics/tactics031/tactics031.html">Side Pawn Capture Strategy (横歩取り戦法) [1]</a></li>
+    <li><a href="tactics/tactics032/tactics032.html">Side Pawn Capture Strategy (横歩取り戦法) [2]</a></li>
+    <li><a href="tactics/tactics033/tactics033.html">Side Pawn Capture — Quick Attack vs Gote's ▽8-6 Pawn Formation
+        (横歩取り　後手▽８六歩型への速攻)</a></li>
+    <li><a href="tactics/tactics034/tactics034.html">Side Pawn Capture — ▽4-5 Bishop Strategy (横歩取り▽４五角戦法) [1]</a></li>
+    <li><a href="tactics/tactics035/tactics035.html">Side Pawn Capture — ▽4-5 Bishop Strategy (横歩取り▽４五角戦法) [2]</a></li>
+    <li><a href="tactics/tactics036/tactics036.html">Side Pawn Capture — ▽4-5 Bishop Strategy (横歩取り▽４五角戦法[３]</a></li>
+    <li><a href="tactics/tactics037/tactics037.html">Side Pawn Capture — ▽3-8 Pawn Strategy (横歩取り▽３八歩戦法) [1]</a></li>
+    <li><a href="tactics/tactics038/tactics038.html">Side Pawn Capture — ▽3-8 Pawn Strategy (横歩取り▽３八歩戦法) [2]</a></li>
+    <li><a href="tactics/tactics039/tactics039.html">Double Side-Pawn Capture Strategy (相横歩取り戦法) [1]</a></li>
+    <li><a href="tactics/tactics040/tactics040.html">Double Side-Pawn Capture Strategy (相横歩取り戦法) [2]</a></li>
+    <li><a href="tactics/tactics041/tactics041.html">Side Pawn Capture — ▽3-3 Bishop "Aerial" Strategy (横歩取り▽３三角空中戦法)
+        [1]</a></li>
+    <li><a href="tactics/tactics042/tactics042.html">Side Pawn Capture — ▽3-3 Bishop "Aerial" Strategy (横歩取り▽３三角空中戦法)
+        [2]</a></li>
+    <li><a href="tactics/tactics043/tactics043.html">Side Pawn Capture — Nakahara-style ▽4-1 King (横歩取り　中原流▽４一玉)</a>
+    </li>
+    <li><a href="tactics/tactics044/tactics044.html">Side Pawn Capture — ▽8-5 Rook Strategy (横歩取り▽８五飛戦法) [1]</a></li>
+    <li><a href="tactics/tactics045/tactics045.html">Side Pawn Capture — ▽8-5 Rook Strategy (横歩取り▽８五飛戦法) [2]</a></li>
+    <li><a href="tactics/tactics046/tactics046.html">Side Pawn Capture — ▽3-3 Knight Strategy (横歩取り▽３三桂戦法)</a></li>
+    <li><a href="tactics/tactics047/tactics047.html">Eiharu-style 19-move Joseki (英春流１９手定跡)</a></li>
+    <li><a href="tactics/tactics048/tactics048.html">No-Guard Strategy (ノーガード戦法) [1]</a></li>
+    <li><a href="tactics/tactics049/tactics049.html">No-Guard Strategy (ノーガード戦法) [2]</a></li>
+    <li><a href="tactics/tactics050/tactics050.html">Facing Rook Strategy (向かい飛車戦法) [1]</a></li>
+    <li><a href="tactics/tactics051/tactics051.html">Facing Rook Strategy (向かい飛車戦法) [2]</a></li>
+    <li><a href="tactics/tactics052/tactics052.html">Facing Rook Strategy (向かい飛車戦法[３]</a></li>
+    <li><a href="tactics/tactics053/tactics053.html">Sakata-style Facing Rook Strategy (阪田流向かい飛車戦法)</a></li>
+    <li><a href="tactics/tactics054/tactics054.html">Oni-goroshi Facing Rook Strategy (鬼殺し向かい飛車戦法) [1]</a></li>
+    <li><a href="tactics/tactics055/tactics055.html">Oni-goroshi Facing Rook Strategy (鬼殺し向かい飛車戦法) [2]</a></li>
+    <li><a href="tactics/tactics056/tactics056.html">Facing Rook — 4th-move ▽3-3 Bishop Formation (４手目▽３三角型向かい飛車戦法)
+        [1]</a></li>
+    <li><a href="tactics/tactics057/tactics057.html">Facing Rook — 4th-move ▽3-3 Bishop Formation (４手目▽３三角型向かい飛車戦法)
+        [2]</a></li>
+    <li><a href="tactics/tactics058/tactics058.html">Sente's Aggressive Facing Rook (先手の攻める向かい飛車) [1]</a></li>
+    <li><a href="tactics/tactics059/tactics059.html">Sente's Aggressive Facing Rook (先手の攻める向かい飛車) [2]</a></li>
+    <li><a href="tactics/tactics060/tactics060.html">"Meriken" (American) Facing Rook Strategy (メリケン向かい飛車戦法) [1]</a>
+    </li>
+    <li><a href="tactics/tactics061/tactics061.html">"Meriken" (American) Facing Rook Strategy (メリケン向かい飛車戦法) [2]</a>
+    </li>
+    <li><a href="tactics/tactics062/tactics062.html">Floating Rook Feint Strategy (浮き飛車目くらまし戦法)</a></li>
+    <li><a href="tactics/tactics063/tactics063.html">Horned Silver Central Rook (ツノ銀中飛車戦法) [1]</a></li>
+    <li><a href="tactics/tactics064/tactics064.html">Horned Silver Central Rook (ツノ銀中飛車戦法) [2]</a></li>
+    <li><a href="tactics/tactics065/tactics065.html">Windmill Strategy (風車戦法) [1]</a></li>
+    <li><a href="tactics/tactics066/tactics066.html">Windmill Strategy (風車戦法) [2]</a></li>
+    <li><a href="tactics/tactics067/tactics067.html">Sente's Attacking Central Rook (先手の攻める中飛車) [1]</a></li>
+    <li><a href="tactics/tactics068/tactics068.html">Sente's Attacking Central Rook (先手の攻める中飛車) [2]</a></li>
+    <li><a href="tactics/tactics069/tactics069.html">Sente's Attacking Central Rook (先手の攻める中飛車[３]</a></li>
+    <li><a href="tactics/tactics070/tactics070.html">5-5 Dragon Central Rook Strategy (５五龍中飛車戦法)</a></li>
+    <li><a href="tactics/tactics071/tactics071.html">Flounder Strategy (ヒラメ戦法) [1]</a></li>
+    <li><a href="tactics/tactics072/tactics072.html">Flounder Strategy (ヒラメ戦法) [2]</a></li>
+    <li><a href="tactics/tactics073/tactics073.html">Gokigen Central Rook (ゴキゲン中飛車戦法) [1]</a></li>
+    <li><a href="tactics/tactics074/tactics074.html">Gokigen Central Rook (ゴキゲン中飛車戦法) [2]</a></li>
+    <li><a href="tactics/tactics075/tactics075.html">Gokigen Central Rook (ゴキゲン中飛車戦法[３]</a></li>
+    <li><a href="tactics/tactics076/tactics076.html">Gokigen Central Rook (ゴキゲン中飛車戦法[４]</a></li>
+    <li><a href="tactics/tactics077/tactics077.html">Gokigen Central Rook — Against Sente's Quick-attack
+        (ゴキゲン中飛車　対先手急戦策)</a></li>
+    <li><a href="tactics/tactics078/tactics078.html">Gokigen Central Rook — Against Sente's Slow (endurance) Strategy
+        (ゴキゲン中飛車　対先手持久戦策)</a></li>
+    <li><a href="tactics/tactics079/tactics079.html">Gokigen Central Rook — Floating Rook Type (ゴキゲン中飛車　浮き飛車型)</a></li>
+    <li><a href="tactics/tactics080/tactics080.html">Sente's Gokigen Central Rook (先手のゴキゲン中飛車) [1]</a></li>
+    <li><a href="tactics/tactics081/tactics081.html">Sente's Gokigen Central Rook (先手のゴキゲン中飛車) [2]</a></li>
+    <li><a href="tactics/tactics082/tactics082.html">Sente's Gokigen Central Rook (先手のゴキゲン中飛車[３]</a></li>
+    <li><a href="tactics/tactics083/tactics083.html">Crossed Bishop Strategy (筋違い角戦法) [1]</a></li>
+    <li><a href="tactics/tactics084/tactics084.html">Crossed Bishop Strategy (筋違い角戦法) [2]</a></li>
+    <li><a href="tactics/tactics085/tactics085.html">Bishop Exchange — Evolution of the Opening (角換り　序盤の変遷)</a></li>
+    <li><a href="tactics/tactics086/tactics086.html">Bishop Exchange — Opening Basics (角換り　序盤の常識)</a></li>
+    <li><a href="tactics/tactics087/tactics087.html">Bishop Exchange — The Three Main Strategies (角換り　主要３戦法)</a></li>
+    <li><a href="tactics/tactics088/tactics088.html">Bishop Exchange — Other Strategies (角換り　その他の戦法)</a></li>
+    <li><a href="tactics/tactics089/tactics089.html">Bishop Exchange Climbing Silver (角換り棒銀戦法) [1]</a></li>
+    <li><a href="tactics/tactics090/tactics090.html">Bishop Exchange Climbing Silver (角換り棒銀戦法) [2]</a></li>
+    <li><a href="tactics/tactics091/tactics091.html">Bishop Exchange Climbing Silver (角換り棒銀戦法[３]</a></li>
+    <li><a href="tactics/tactics092/tactics092.html">Bishop Exchange Climbing Silver (角換り棒銀戦法[４]</a></li>
+    <li><a href="tactics/tactics093/tactics093.html">Quick-Silver (Hayakurigin) Strategy (早繰り銀戦法) [1]</a></li>
+    <li><a href="tactics/tactics094/tactics094.html">Quick-Silver Strategy (早繰り銀戦法) [2]</a></li>
+    <li><a href="tactics/tactics095/tactics095.html">Quick-Silver Strategy (早繰り銀戦法[３]</a></li>
+    <li><a href="tactics/tactics096/tactics096.html">Quick-Silver Strategy (早繰り銀戦法[４]</a></li>
+    <li><a href="tactics/tactics097/tactics097.html">Bishop Exchange Sitting Silver — Kimura Joseki (角換り腰掛け銀 木村定跡)</a>
+    </li>
+    <li><a href="tactics/tactics098/tactics098.html">Bishop Exchange Sitting Silver — Gote Defensive Type (角換り腰掛け銀
+        後手専守防衛型) [1]</a></li>
+    <li><a href="tactics/tactics099/tactics099.html">Bishop Exchange Sitting Silver — Gote Defensive Type (角換り腰掛け銀
+        後手専守防衛型) [2]</a></li>
+    <li><a href="tactics/tactics100/tactics100.html">Bishop Exchange Sitting Silver — Same Shape for Both Sides (角換り腰掛け銀
+        先後同型) [1]</a></li>
+    <li><a href="tactics/tactics101/tactics101.html">Bishop Exchange Sitting Silver — Same Shape for Both Sides (角換り腰掛け銀
+        先後同型) [2]</a></li>
+    <li><a href="tactics/tactics102/tactics102.html">Bishop Exchange Sitting Silver — Same Shape for Both Sides (角換り腰掛け銀
+        先後同型[３]</a></li>
+    <li><a href="tactics/tactics103/tactics103.html">Bishop Exchange Sitting Silver — Same Shape for Both Sides (角換り腰掛け銀
+        先後同型[４]</a></li>
+    <li><a href="tactics/tactics104/tactics104.html">Bishop Exchange Sitting Silver — vs Gote's Climbing Silver (角換り腰掛け銀
+        対後手棒銀) [1]</a></li>
+    <li><a href="tactics/tactics105/tactics105.html">Bishop Exchange Sitting Silver — vs Gote's Climbing Silver (角換り腰掛け銀
+        対後手棒銀) [2]</a></li>
+    <li><a href="tactics/tactics106/tactics106.html">Gote One-move Loss Bishop Exchange (後手一手損角換り)</a></li>
+    <li><a href="tactics/tactics107/tactics107.html">Bishop Exchange — Tactical Variations (角換り　変化戦術) [1]</a></li>
+    <li><a href="tactics/tactics108/tactics108.html">Bishop Exchange — Tactical Variations (角換り　変化戦術) [2]</a></li>
+    <li><a href="tactics/tactics109/tactics109.html">Double Ranging Rook — Dangerous Opening (相振り飛車　危険な序盤) [1]</a></li>
+    <li><a href="tactics/tactics110/tactics110.html">Double Ranging Rook — Dangerous Opening (相振り飛車　危険な序盤) [2]</a></li>
+    <li><a href="tactics/tactics111/tactics111.html">Double Ranging Rook — Facing Rook vs Third-file Rook
+        (相振り飛車　向かい飛車vs三間飛車) [1]</a></li>
+    <li><a href="tactics/tactics112/tactics112.html">Double Ranging Rook — Facing Rook vs Third-file Rook
+        (相振り飛車　向かい飛車vs三間飛車) [2]</a></li>
+    <li><a href="tactics/tactics113/tactics113.html">Double Ranging Rook — Facing Rook vs Third-file Rook
+        (相振り飛車　向かい飛車vs三間飛車[３]</a></li>
+    <li><a href="tactics/tactics114/tactics114.html">Double Ranging Rook — Facing Rook vs Third-file Rook
+        (相振り飛車　向かい飛車vs三間飛車[４]</a></li>
+    <li><a href="tactics/tactics115/tactics115.html">Double Ranging Rook — Facing Rook vs Fourth-file Rook
+        (相振り飛車　向かい飛車vs四間飛車)</a></li>
+    <li><a href="tactics/tactics116/tactics116.html">Double Ranging Rook — Facing Rook vs Central Rook
+        (相振り飛車　向かい飛車vs中飛車) [1]</a></li>
+    <li><a href="tactics/tactics117/tactics117.html">Double Ranging Rook — Facing Rook vs Central Rook
+        (相振り飛車　向かい飛車vs中飛車) [2]</a></li>
+    <li><a href="tactics/tactics118/tactics118.html">Double Ranging Rook — Facing Rook vs Facing Rook
+        (相振り飛車　向かい飛車vs向かい飛車) [1]</a></li>
+    <li><a href="tactics/tactics119/tactics119.html">Double Ranging Rook — Facing Rook vs Facing Rook
+        (相振り飛車　向かい飛車vs向かい飛車) [2]</a></li>
+    <li><a href="tactics/tactics120/tactics120.html">Double Ranging Rook — Facing Rook vs Facing Rook
+        (相振り飛車　向かい飛車vs向かい飛車[３]</a></li>
+    <li><a href="tactics/tactics121/tactics121.html">Double Ranging Rook — Facing Rook vs Facing Rook
+        (相振り飛車　向かい飛車vs向かい飛車[４]</a></li>
+    <li><a href="tactics/tactics122/tactics122.html">Double Yagura — Perpetual-check (Repetition) Analysis (相総矢倉　千日手の検証)
+        [1]</a></li>
+    <li><a href="tactics/tactics123/tactics123.html">Double Yagura — Perpetual-check Analysis (相総矢倉　千日手の検証) [2]</a></li>
+    <li><a href="tactics/tactics124/tactics124.html">Double Yagura — Perpetual-check Analysis (相総矢倉　千日手の検証[３]</a></li>
+    <li><a href="tactics/tactics125/tactics125.html">Yagura — Gote Ultra-quick Climbing Silver (矢倉　後手超急戦棒銀) [1]</a></li>
+    <li><a href="tactics/tactics126/tactics126.html">Yagura — Gote Ultra-quick Climbing Silver (矢倉　後手超急戦棒銀) [2]</a></li>
+    <li><a href="tactics/tactics127/tactics127.html">Yagura — ▲3-7 Silver Strategy (矢倉　▲３七銀戦法)</a></li>
+    <li><a href="tactics/tactics128/tactics128.html">Yagura — ▲3-5 Pawn Early Assault (矢倉　▲３五歩早仕掛け)</a></li>
+    <li><a href="tactics/tactics129/tactics129.html">Yagura — Sparrow-pecking Strategy (スズメ刺し戦法)</a></li>
+    <li><a href="tactics/tactics130/tactics130.html">Yagura — Right Fourth-file Rook Strategy (矢倉　右四間飛車戦法)</a></li>
+    <li><a href="tactics/tactics131/tactics131.html">Yagura Central Rook Strategy (矢倉中飛車戦法)</a></li>
+    <li><a href="tactics/tactics132/tactics132.html">Yonenaga-style Rapid Yagura (米長流急戦矢倉)</a></li>
+    <li><a href="tactics/tactics133/tactics133.html">Yagura — Morishita System (矢倉　森下システム) [1]</a></li>
+    <li><a href="tactics/tactics134/tactics134.html">Yagura — Morishita System (矢倉　森下システム) [2]</a></li>
+    <li><a href="tactics/tactics135/tactics135.html">Yagura — Morishita System (矢倉　森下システム) [3]</a></li>
+    <li><a href="tactics/tactics136/tactics136.html">Yagura — Waki System (矢倉　脇システム)</a></li>
+    <li><a href="tactics/tactics137/tactics137.html">Gangi Strategy (雁木戦法)</a></li>
+    <li><a href="tactics/tactics138/tactics138.html">Crab-Crab Silver Strategy (カニカニ銀戦法)</a></li>
+    <li><a href="tactics/tactics139/tactics139.html">Left 5-7 Silver Diagonal Climbing Silver (５七銀左型ナナメ棒銀) [1]</a></li>
+    <li><a href="tactics/tactics140/tactics140.html">Left 5-7 Silver Diagonal Climbing Silver (５七銀左型ナナメ棒銀) [2]</a></li>
+    <li><a href="tactics/tactics141/tactics141.html">Left 5-7 Silver Edge Bishop Strategy (５七銀左型端角戦法) [1]</a></li>
+    <li><a href="tactics/tactics142/tactics142.html">Left 5-7 Silver Edge Bishop Strategy (５七銀左型端角戦法) [2]</a></li>
+    <li><a href="tactics/tactics143/tactics143.html">Saginomiya Joseki (鷺宮定跡) [1]</a></li>
+    <li><a href="tactics/tactics144/tactics144.html">Saginomiya Joseki (鷺宮定跡) [2]</a></li>
+    <li><a href="tactics/tactics145/tactics145.html">Saginomiya Joseki (鷺宮定跡) [3]</a></li>
+    <li><a href="tactics/tactics146/tactics146.html">Saginomiya Joseki (鷺宮定跡) [4]</a></li>
+    <li><a href="tactics/tactics147/tactics147.html">Nakahara-style Edge Bishop Strategy (中原流端角戦法)</a></li>
+    <li><a href="tactics/tactics148/tactics148.html">▲4-6 Silver Strategy (Left-silver type) (▲４六銀戦法(左銀型)) [1]</a></li>
+    <li><a href="tactics/tactics149/tactics149.html">▲4-6 Silver Strategy (Left-silver type) (▲４六銀戦法(左銀型)) [2]</a></li>
+    <li><a href="tactics/tactics150/tactics150.html">▲4-6 Silver Strategy (Left-silver type) (▲４六銀戦法(左銀型)) [3]</a></li>
+    <li><a href="tactics/tactics151/tactics151.html">▲4-6 Silver Strategy (Right-silver type) (▲４六銀戦法(右銀型)) [1]</a></li>
+    <li><a href="tactics/tactics152/tactics152.html">▲4-6 Silver Strategy (Right-silver type) (▲４六銀戦法(右銀型)) [2]</a></li>
+    <li><a href="tactics/tactics153/tactics153.html">▲5-7 Silver Right-type — 3-8 Rook Strategy (▲５七銀右型 ３八飛戦法) [1]</a>
+    </li>
+    <li><a href="tactics/tactics154/tactics154.html">▲5-7 Silver Right-type — 3-8 Rook Strategy (▲５七銀右型 ３八飛戦法) [2]</a>
+    </li>
+    <li><a href="tactics/tactics155/tactics155.html">▲5-7 Silver Left-type ▲4-5 Pawn Early Assault (▲５七銀左型▲４五歩早仕掛け)
+        [1]</a></li>
+    <li><a href="tactics/tactics156/tactics156.html">▲5-7 Silver Left-type ▲4-5 Pawn Early Assault (▲５七銀左型▲４五歩早仕掛け)
+        [2]</a></li>
+    <li><a href="tactics/tactics157/tactics157.html">▲5-7 Silver Left-type ▲4-5 Pawn Early Assault (▲５七銀左型▲４五歩早仕掛け)
+        [3]</a></li>
+    <li><a href="tactics/tactics158/tactics158.html">▲5-7 Silver Left-type ▲4-5 Pawn Early Assault (▲５七銀左型▲４五歩早仕掛け)
+        [4]</a></li>
+    <li><a href="tactics/tactics159/tactics159.html">Counter vs Third-file Rook ▲4-5 Pawn Early Assault (対三間飛車▲４五歩早仕掛け)
+        [1]</a></li>
+    <li><a href="tactics/tactics160/tactics160.html">Counter vs Third-file Rook ▲4-5 Pawn Early Assault (対三間飛車▲４五歩早仕掛け)
+        [2]</a></li>
+    <li><a href="tactics/tactics161/tactics161.html">Counter vs Third-file Rook ▲4-5 Pawn Early Assault (対三間飛車▲４五歩早仕掛け)
+        [3]</a></li>
+    <li><a href="tactics/tactics162/tactics162.html">Counter vs Third-file Rook ▲4-5 Pawn Early Assault (対三間飛車▲４五歩早仕掛け)
+        [4]</a></li>
+    <li><a href="tactics/tactics163/tactics163.html">Counter vs Fourth-file Rook Climbing Silver (対四間飛車棒銀戦法) [1]</a>
+    </li>
+    <li><a href="tactics/tactics164/tactics164.html">Counter vs Fourth-file Rook Climbing Silver (対四間飛車棒銀戦法) [2]</a>
+    </li>
+    <li><a href="tactics/tactics165/tactics165.html">Counter vs Fourth-file Rook Climbing Silver (対四間飛車棒銀戦法) [3]</a>
+    </li>
+    <li><a href="tactics/tactics166/tactics166.html">Counter vs Fourth-file Rook Climbing Silver (対四間飛車棒銀戦法) [4]</a>
+    </li>
+    <li><a href="tactics/tactics167/tactics167.html">Counter vs Fourth-file Rook Climbing Silver (対四間飛車棒銀戦法) [5]</a>
+    </li>
+    <li><a href="tactics/tactics168/tactics168.html">Counter vs Fourth-file Rook Climbing Silver (対四間飛車棒銀戦法) [6]</a>
+    </li>
+    <li><a href="tactics/tactics169/tactics169.html">Counter vs Fourth-file Rook Climbing Silver (対四間飛車棒銀戦法) [7]</a>
+    </li>
+    <li><a href="tactics/tactics170/tactics170.html">Counter vs Fourth-file Rook Climbing Silver (対四間飛車棒銀戦法) [8]</a>
+    </li>
+    <li><a href="tactics/tactics171/tactics171.html">▽4-1 Gold Formation Fourth-file Rook (▽４一金型四間飛車) [1]</a></li>
+    <li><a href="tactics/tactics172/tactics172.html">▽4-1 Gold Formation Fourth-file Rook (▽４一金型四間飛車) [2]</a></li>
+    <li><a href="tactics/tactics173/tactics173.html">▽4-1 Gold Formation Fourth-file Rook (▽４一金型四間飛車) [3]</a></li>
+    <li><a href="tactics/tactics174/tactics174.html">▽4-1 Gold Formation Fourth-file Rook (▽４一金型四間飛車) [4]</a></li>
+    <li><a href="tactics/tactics175/tactics175.html">vs Fourth-file Rook — 5-file Occupation (対四間飛車５筋位取り) [1]</a></li>
+    <li><a href="tactics/tactics176/tactics176.html">vs Fourth-file Rook — 5-file Occupation (対四間飛車５筋位取り) [2]</a></li>
+    <li><a href="tactics/tactics177/tactics177.html">vs Fourth-file Rook — 5-file Occupation (対四間飛車５筋位取り) [3]</a></li>
+    <li><a href="tactics/tactics178/tactics178.html">vs Fourth-file Rook — 5-file Occupation (対四間飛車５筋位取り) [4]</a></li>
+    <li><a href="tactics/tactics179/tactics179.html">Kamaitachi Strategy (かまいたち戦法) [1]</a></li>
+    <li><a href="tactics/tactics180/tactics180.html">Kamaitachi Strategy (かまいたち戦法) [2]</a></li>
+    <li><a href="tactics/tactics181/tactics181.html">Bird-stabbing Strategy (鳥刺し戦法) [1]</a></li>
+    <li><a href="tactics/tactics182/tactics182.html">Bird-stabbing Strategy (鳥刺し戦法) [2]</a></li>
+    <li><a href="tactics/tactics183/tactics183.html">King-head Occupation Strategy (玉頭位取り戦法) [1]</a></li>
+    <li><a href="tactics/tactics184/tactics184.html">King-head Occupation Strategy (玉頭位取り戦法) [2]</a></li>
+    <li><a href="tactics/tactics185/tactics185.html">King-head Occupation Strategy (玉頭位取り戦法) [3]</a></li>
+    <li><a href="tactics/tactics186/tactics186.html">King-head Occupation Strategy (玉頭位取り戦法) [4]</a></li>
+    <li><a href="tactics/tactics187/tactics187.html">vs Fourth-file Rook — Left Mino (対四間飛車左美濃) [1]</a></li>
+    <li><a href="tactics/tactics188/tactics188.html">vs Fourth-file Rook — Left Mino (対四間飛車左美濃) [2]</a></li>
+    <li><a href="tactics/tactics189/tactics189.html">Fujii System vs Left Mino (藤井システムVS左美濃) [1]</a></li>
+    <li><a href="tactics/tactics190/tactics190.html">Fujii System vs Left Mino (藤井システムVS左美濃) [2]</a></li>
+    <li><a href="tactics/tactics191/tactics191.html">Fujii System vs Left Mino (藤井システムVS左美濃) [3]</a></li>
+    <li><a href="tactics/tactics192/tactics192.html">Fujii System vs Left Mino (藤井システムVS左美濃) [4]</a></li>
+    <li><a href="tactics/tactics193/tactics193.html">Fujii System vs Left Mino (藤井システムVS左美濃) [5]</a></li>
+    <li><a href="tactics/tactics194/tactics194.html">Static Rook Anaguma Strategy — Early Period (居飛車穴熊戦法　黎明期) [1]</a>
+    </li>
+    <li><a href="tactics/tactics195/tactics195.html">Static Rook Anaguma Strategy — Early Period (居飛車穴熊戦法　黎明期) [2]</a>
+    </li>
+    <li><a href="tactics/tactics196/tactics196.html">Static Rook Anaguma Strategy — Early Period (居飛車穴熊戦法　黎明期) [3]</a>
+    </li>
+    <li><a href="tactics/tactics197/tactics197.html">Fujii System vs Static Rook Anaguma (藤井システムVS居飛車穴熊) [1]</a></li>
+    <li><a href="tactics/tactics198/tactics198.html">Fujii System vs Static Rook Anaguma (藤井システムVS居飛車穴熊) [2]</a></li>
+    <li><a href="tactics/tactics199/tactics199.html">Fujii System vs Static Rook Anaguma (藤井システムVS居飛車穴熊) [3]</a></li>
+    <li><a href="tactics/tactics200/tactics200.html">Fujii System vs Static Rook Anaguma (藤井システムVS居飛車穴熊) [4]</a></li>
+    <li><a href="tactics/tactics201/tactics201.html">Sente's Fujii System (先手の藤井システム) [1]</a></li>
+    <li><a href="tactics/tactics202/tactics202.html">Sente's Fujii System (先手の藤井システム) [2]</a></li>
+    <li><a href="tactics/tactics203/tactics203.html">Sente's Fujii System (先手の藤井システム) [3]</a></li>
+    <li><a href="tactics/tactics204/tactics204.html">Sente's Fujii System (先手の藤井システム) [4]</a></li>
+    <li><a href="tactics/tactics205/tactics205.html">Sente's Fujii System vs Gote's Quick Attack (先手の藤井システムvs後手急戦)
+        [1]</a></li>
+    <li><a href="tactics/tactics206/tactics206.html">Sente's Fujii System vs Gote's Quick Attack (先手の藤井システムvs後手急戦)
+        [2]</a></li>
+    <li><a href="tactics/tactics207/tactics207.html">Kushikatsu (Skewer Cutlet) Castle (串カツ囲い)</a></li>
+    <li><a href="tactics/tactics208/tactics208.html">Millennium (ミレニアム) [1]</a></li>
+    <li><a href="tactics/tactics209/tactics209.html">Millennium (ミレニアム) [2]</a></li>
+    <li><a href="tactics/tactics210/tactics210.html">Millennium (ミレニアム) [3]</a></li>
+    <li><a href="tactics/tactics211/tactics211.html">Static Rook Anaguma vs Fourth-file Rook — Fierce Period
+        (居飛車穴熊vs四間飛車　激戦期) [1]</a></li>
+    <li><a href="tactics/tactics212/tactics212.html">Static Rook Anaguma vs Fourth-file Rook — Fierce Period
+        (居飛車穴熊vs四間飛車　激戦期) [2]</a></li>
+    <li><a href="tactics/tactics213/tactics213.html">Static Rook Anaguma vs Fourth-file Rook — Fierce Period
+        (居飛車穴熊vs四間飛車　激戦期) [3]</a></li>
+    <li><a href="tactics/tactics214/tactics214.html">Static Rook Anaguma vs Fourth-file Rook — Fierce Period
+        (居飛車穴熊vs四間飛車　激戦期) [4]</a></li>
+    <li><a href="tactics/tactics215/tactics215.html">Static Rook Anaguma vs Fourth-file Rook — Fierce Period
+        (居飛車穴熊vs四間飛車　激戦期) [5]</a></li>
+    <li><a href="tactics/tactics216/tactics216.html">Static Rook Anaguma vs Fourth-file Rook — Fierce Period
+        (居飛車穴熊vs四間飛車　激戦期) [6]</a></li>
+    <li><a href="tactics/tactics217/tactics217.html">Static Rook Anaguma vs Fourth-file Rook — Fierce Period
+        (居飛車穴熊vs四間飛車　激戦期) [7]</a></li>
+    <li><a href="tactics/tactics218/tactics218.html">Static Rook Anaguma vs Fourth-file Rook — Fierce Period
+        (居飛車穴熊vs四間飛車　激戦期) [8]</a></li>
+    <li><a href="tactics/tactics219/tactics219.html">Static Rook Anaguma vs Fourth-file Rook — Fierce Period
+        (居飛車穴熊vs四間飛車　激戦期) [9]</a></li>
+    <li><a href="tactics/tactics220/tactics220.html">Static Rook Anaguma vs Fourth-file Rook — Fierce Period
+        (居飛車穴熊vs四間飛車　激戦期) [10]</a></li>
+  </ol>
 </body>
+
 </html>
