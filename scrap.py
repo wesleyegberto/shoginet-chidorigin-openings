@@ -1,25 +1,24 @@
 import requests
-import time
 import os
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin, urlparse
 import re
 
 # ============================================================
-# CONFIGURAÇÃO
+# CONFIGURATION
 # ============================================================
 
 BASE_URL = "http://shogi-chess.net/senpouzukan/"
 TACTICS_PREFIX = "tactics"
 OUTPUT_DIR = "scraped_senpouzukan"
-REQUEST_DELAY = 0.1       # segundos entre requisições
+REQUEST_DELAY = 0.1       # seconds between requests
 
 DOWNLOAD_IMAGES = False
 DOWNLOAD_CSS = False
 DOWNLOAD_JS = False
 DOWNLOAD_IFRAMES = False
 DOWNLOAD_KIFU = True
-MAX_IFRAME_DEPTH = 2      # limite recursivo
+MAX_IFRAME_DEPTH = 2      # recursive depth limit
 
 TRANSLATE = False
 TRANSLATION_MODE = "none"  # "none", "deepl", "openai"
@@ -33,7 +32,7 @@ downloaded_pages = set()
 downloaded_kif = set()
 
 # ============================================================
-# ROBOTS.TXT
+# ROBOTS.TXT CHECK
 # ============================================================
 
 def check_robots_txt(base_url):
@@ -41,24 +40,24 @@ def check_robots_txt(base_url):
     try:
         r = requests.get(robots_url, timeout=10)
         if r.status_code != 200:
-            print("[Aviso] robots.txt não encontrado. Prosseguindo.")
+            print("[Warning] robots.txt not found. Proceeding.")
             return True
 
         rules = r.text.lower()
         if "disallow" in rules and "senpouzukan" in rules:
-            print("❌ robots.txt pode impedir scraping desse diretório.")
+            print("❌ robots.txt may block scraping of this directory.")
             print(r.text)
             return False
 
-        print("✅ robots.txt verificado, aparentemente liberado.")
+        print("✅ robots.txt checked, apparently allowed.")
         return True
 
     except Exception as e:
-        print(f"[Erro] ao verificar robots.txt: {e}")
+        print(f"[Error] checking robots.txt: {e}")
         return False
 
 # ============================================================
-# TRADUÇÃO (Opcional)
+# TRANSLATION (Optional)
 # ============================================================
 
 def translate_text(text):
@@ -81,7 +80,7 @@ def translate_text(text):
             model="gpt-4o-mini",
             messages=[
                 {"role": "system",
-                 "content": "Traduza do japonês para português mantendo as notações ▲/▽ intactas."},
+                 "content": "Translate from Japanese to English keeping ▲/▽ notations intact."},
                 {"role": "user", "content": text}
             ]
         )
@@ -91,18 +90,18 @@ def translate_text(text):
 
 
 # ============================================================
-# DOWNLOAD DE RECURSOS
+# ASSET DOWNLOAD
 # ============================================================
 
 def fetch(url):
-    """Faz request HTTP e retorna o conteúdo mantendo o encoding original."""
+    """HTTP request returning content with original encoding preserved."""
     try:
         resp = requests.get(url, timeout=15)
         resp.encoding = resp.apparent_encoding
-        print(f"   ✔ Recurso baixado: {url}")
+        print(f"   ✔ Resource downloaded: {url}")
         return resp
     except Exception as e:
-        print(f"   ✖ Falhou ao baixar {url}: {e}")
+        print(f"   ✖ Failed to download {url}: {e}")
         raise e
 
 
@@ -112,15 +111,15 @@ def download_file(url, dest_path):
         os.makedirs(os.path.dirname(dest_path), exist_ok=True)
         with open(dest_path, "wb") as f:
             f.write(r.content)
-        print(f"   ✔ Recurso baixado: {url}")
+        print(f"   ✔ Resource downloaded: {url}")
     except Exception as e:
-        print(f"   ✖ Falhou ao baixar {url}: {e}")
+        print(f"   ✖ Failed to download {url}: {e}")
 
 
 def download_assets(soup, base_url, page_dir, iframe_depth=0):
     assets = []
 
-    # ==== IMAGENS =============================================================
+    # ==== IMAGES ==============================================================
     if DOWNLOAD_IMAGES:
         for img in soup.find_all("img"):
             src = img.get("src")
@@ -130,7 +129,7 @@ def download_assets(soup, base_url, page_dir, iframe_depth=0):
             dest = os.path.join(page_dir, "assets/img", filename)
             assets.append((full_url, dest))
 
-    # ==== CSS =================================================================
+    # ==== CSS ================================================================
     if DOWNLOAD_CSS:
         for css in soup.find_all("link", rel="stylesheet"):
             href = css.get("href")
@@ -140,7 +139,7 @@ def download_assets(soup, base_url, page_dir, iframe_depth=0):
             dest = os.path.join(page_dir, "assets/css", filename)
             assets.append((full_url, dest))
 
-    # ==== JS ==================================================================
+    # ==== JS =================================================================
     if DOWNLOAD_JS:
         for js in soup.find_all("script", src=True):
             src = js["src"]
@@ -149,13 +148,13 @@ def download_assets(soup, base_url, page_dir, iframe_depth=0):
             dest = os.path.join(page_dir, "assets/js", filename)
             assets.append((full_url, dest))
 
-    # ==== IFRAMES =============================================================
+    # ==== IFRAMES ============================================================
     if (DOWNLOAD_IFRAMES or DOWNLOAD_KIFU) and iframe_depth < MAX_IFRAME_DEPTH:
         for iframe in soup.find_all("iframe"):
             src = iframe.get("src")
             if not src: continue
 
-            # Baixa o iframe bruto
+            # Download raw iframe
             if DOWNLOAD_IFRAMES:
                 full_url = urljoin(base_url, src)
                 filename = os.path.basename(full_url)
@@ -163,19 +162,19 @@ def download_assets(soup, base_url, page_dir, iframe_depth=0):
 
                 assets.append((full_url, dest))
 
-                # Baixa conteúdo do iframe recursivamente
+                # Recursively download iframe content
                 try:
                     r = requests.get(full_url, timeout=10)
                     iframe_html = r.text
                     iframe_soup = BeautifulSoup(iframe_html, "html.parser")
 
-                    # chamada recursiva
+                    # recursive call
                     download_assets(iframe_soup, full_url,
                                     os.path.join(page_dir, "assets/iframe"),
                                     iframe_depth + 1)
 
                 except Exception as e:
-                    print(f"   ✖ Erro ao processar iframe {full_url}: {e}")
+                    print(f"   ✖ Error processing iframe {full_url}: {e}")
 
             if DOWNLOAD_KIFU and "kj.html?tactics" in src and src.endswith(".kif"):
                 # Exemplo: kj.html?tactics104.kif
@@ -189,17 +188,17 @@ def download_assets(soup, base_url, page_dir, iframe_depth=0):
                 except Exception:
                     pass
 
-    # ==== Executa downloads ===================================================
+    # ==== Execute downloads ==================================================
     for url, dest in assets:
         download_file(url, dest)
 
 
 # ============================================================
-# COLETAR LINKS TACTICS
+# COLLECT TACTICS LINKS
 # ============================================================
 
 def collect_tactics_links():
-    print("🔎 Coletando links do prefixo 'tactics'…")
+    print("🔎 Collecting links with prefix 'tactics'…")
     r = requests.get(BASE_URL, timeout=10)
     soup = BeautifulSoup(r.text, "html.parser")
 
@@ -211,29 +210,29 @@ def collect_tactics_links():
             links.append(full_url)
 
     links = sorted(set(links))
-    print(f"📌 {len(links)} páginas encontradas.")
+    print(f"📌 {len(links)} pages found.")
     return links
 
 # ============================================================
-# SCRAPING DA PÁGINA
+# PAGE SCRAPING
 # ============================================================
 
 def scrape_page(url):
-    print(f"\n📄 Baixando página: {url}")
+    print(f"\n📄 Downloading page: {url}")
 
     r = requests.get(url, timeout=10)
     # r.encoding = r.apparent_encoding
     r.encoding = "shift_jis"
     soup = BeautifulSoup(r.text, "html.parser")
 
-    # Download de recursos
+    # Download assets
     parsed = urlparse(url)
     name = os.path.basename(parsed.path).replace(".html", "").replace(".htm", "")
     page_dir = os.path.join(OUTPUT_DIR, name)
     os.makedirs(page_dir, exist_ok=True)
 
 
-    # Salvar arquivos
+    # Save files
     # with open(os.path.join(page_dir, "raw.html"), "w", encoding=ENCODING) as f:
     page_content = r.text.replace("charset=Shift_JIS", "charset=utf-8") \
         .replace("iframe src=\"", "iframe src=\"http://shogi-chess.net/senpouzukan/") \
@@ -248,7 +247,7 @@ def scrape_page(url):
     download_assets(soup, url, page_dir)
 
     if TRANSLATE:
-        # Extrair texto puro
+        # Extract plain text
         text = soup.get_text("\n")
         text = re.sub(r"\n{2,}", "\n", text).strip()
 
@@ -260,22 +259,22 @@ def scrape_page(url):
         with open(os.path.join(page_dir, "traduzido.txt"), "w") as f:
             f.write(translated)
 
-        md = f"# Página: {url}\n\n## Original\n```\n{text}\n```\n\n## Tradução\n{translated}\n"
+        md = f"# Page: {url}\n\n## Original\n```\n{text}\n```\n\n## Translation\n{translated}\n"
         with open(os.path.join(page_dir, "page.md"), "w") as f:
             f.write(md)
 
-    print(f"✔ Página salva em {page_dir}")
+    print(f"✔ Page saved to {page_dir}")
 
 
 # ============================================================
-# GERAR ÍNDICE DAS PÁGINAS SCRAPED
+# GENERATE INDEX OF SCRAPED PAGES
 # ============================================================
 
 def generate_index_md():
     index_path = os.path.join(OUTPUT_DIR, "index.md")
     pages = []
 
-    # percorre as pastas geradas
+    # iterate generated folders
     for name in sorted(os.listdir(OUTPUT_DIR)):
         page_dir = os.path.join(OUTPUT_DIR, name)
         if os.path.isdir(page_dir) and name != "assets":
@@ -284,20 +283,20 @@ def generate_index_md():
                 pages.append((name, page_md))
 
     with open(index_path, "w", encoding="utf-8") as f:
-        f.write("# Índice das páginas scrapeadas\n\n")
-        f.write("Lista automática gerada após o scrape.\n\n")
+        f.write("# Index of scraped pages\n\n")
+        f.write("Automatically generated list after scraping.\n\n")
 
         for name, path in pages:
             rel = os.path.relpath(path, OUTPUT_DIR)
             f.write(f"- [{name}]({rel})\n")
 
-    print(f"📘 Índice gerado em: {index_path}")
+    print(f"📘 Index generated at: {index_path}")
 
 def generate_index_html():
     index_path = os.path.join(OUTPUT_DIR, "index.html")
     pages = []
 
-    # percorre as pastas geradas
+    # iterate generated folders
     for name in sorted(os.listdir(OUTPUT_DIR)):
         page_dir = os.path.join(OUTPUT_DIR, name)
         if os.path.isdir(page_dir) and name != "assets":
@@ -313,7 +312,7 @@ def generate_index_html():
             f.write(f"<a href=\"{rel}\">{name}</a>\n")
         f.write("</ul>")
 
-    print(f"📘 Índice gerado em: {index_path}")
+    print(f"📘 Index generated at: {index_path}")
 
 # ============================================================
 # MAIN
@@ -321,7 +320,7 @@ def generate_index_html():
 
 def main():
     if not check_robots_txt(BASE_URL):
-        print("🚫 Scraping bloqueado pelo robots.txt.")
+        print("🚫 Scraping blocked by robots.txt.")
         return
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
@@ -336,7 +335,7 @@ def main():
     # generate_index_md()
     generate_index_html()
 
-    print("\n🎉 Finalizado com sucesso!")
+    print("\n🎉 Finished successfully!")
 
 if __name__ == "__main__":
     main()
