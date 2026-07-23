@@ -27,7 +27,21 @@
 	<div id="KJ_DIV" style="width:580px;">
 		<script language="javascript" type="text/javascript">
 			const KJ_DIR = "./";
-			const KIF_FILE_NAME = str;
+			// The iframe is loaded from tactics/tacticsXXX/tacticsXXX.html
+			// Therefore, the .kif file resides in the same directory as the tactics page.
+			// Resolve the relative path from where kj.html is running.
+			const referrer = document.referrer || window.parent.location.href;
+			let kifPath = str;
+			if (referrer && referrer.includes('/tactics/')) {
+				try {
+					const parts = referrer.split('/tactics/');
+					const subPath = parts[1].split('/')[0]; // e.g. tactics001
+					kifPath = "../tactics/" + subPath + "/" + str;
+				} catch (e) {
+					kifPath = "../tactics/" + str.substring(0, 10) + "/" + str;
+				}
+			}
+			const KIF_FILE_NAME = kifPath;
 			// const KJ_LEFT = true;
 			// const UPDATE_TIME = 0;
 			// const START_TESUU = 10;
