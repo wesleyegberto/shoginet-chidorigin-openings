@@ -24,7 +24,7 @@ You are a professional translator specializing in Shogi (Japanese Chess). Your t
 
 4. **Formatting**:
    - The output must be returned as an HTML fragment (no `<html>`, `<head>`, `<body>` wrappers, and no title tags).
-   - When a sequence of moves is listed, format each move on a new line using a `<ul style="list-style-type: none; padding-left: 0;">` list where the `<li>` tags have styling to hide the default list bullet (e.g., `<li>`). Do not add move numbers. Do not add tag `<strong>` when using listing `<li>`
+   - When a sequence of moves is listed, format each move on a new line using a `<ul style="list-style-type: none; padding-left: 0;">` list where the `<li>` tags have styling to hide the default list bullet (e.g., `<li>`). Do not add move numbers. Do not add tag `<strong>` when the move is in a listing `<li>`
    - Use the `<strong>` tag to highlight moves (e.g., `<strong>▲７六歩</strong>`) and board squares (e.g., `<strong>3三</strong>`) when they appear within the text.
    - Do NOT wrap "Figure N" (e.g., 図1, 図2) with `<strong>`.
 </rules>
