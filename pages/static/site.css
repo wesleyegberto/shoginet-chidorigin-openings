@@ -1,0 +1,78 @@
+/*
+ * Chidorigin's Senpou Zukan — shared site styles
+ * Applied to all 221 translated tactics pages via <link>.
+ * Goals: harmonize font, colors, and link behavior with the index page
+ * while preserving the warm traditional aesthetic of the tactics pages.
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=M+PLUS+1+Code:wght@400&display=swap');
+
+body {
+    font-family: 'Noto Serif JP', serif;
+    color: #2a1a0e;
+    font-size: 16px;
+}
+
+/* Override the table's inline font-size: small */
+table {
+    font-family: 'Noto Serif JP', serif !important;
+    font-size: 16px !important;
+    color: #2a1a0e;
+}
+
+td {
+    font-family: 'Noto Serif JP', serif;
+    color: #2a1a0e;
+}
+
+/* Links: match index accent */
+a {
+    color: #1a6dbf;
+    transition: color 0.15s;
+}
+
+a:visited {
+    color: #6b4a9e;
+}
+
+/* Override the vintage 2002-era position-shift hover */
+a:hover {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    color: #0f4a8a;
+}
+
+/* Branded selection color (matches index) */
+::selection {
+    background: #4a90e2;
+    color: #fff;
+}
+
+/* Chapter title h2 */
+h2 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.4rem;
+    color: #1a3a5c;
+    margin-bottom: 16px;
+}
+
+/* Body text rhythm */
+p {
+    line-height: 1.75;
+    margin-bottom: 1em;
+}
+
+/*
+ * Move notation — monospaced Japanese font so ▲/▽ and kanji align vertically.
+ * Covers both formats used across tactics pages:
+ *   - <ul><li>move</li></ul>  (most pages)
+ *   - <div style="margin-bottom:1em">move<br></div>  (some pages)
+ */
+td[valign="top"] ul,
+td[valign="top"] ul li,
+td[valign="top"] div[style] {
+    font-family: 'M PLUS 1 Code', 'Courier New', monospace;
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
