@@ -1,78 +1,251 @@
 /*
- * Chidorigin's Senpou Zukan — shared site styles
- * Applied to all 221 translated tactics pages via <link>.
- * Goals: harmonize font, colors, and link behavior with the index page
- * while preserving the warm traditional aesthetic of the tactics pages.
+ * Chidorigin's Senpou Zukan — shared tactics page styles
+ * Applied to all translated tactics pages via <link>.
+ * Design tokens mirror index.css for visual consistency.
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=M+PLUS+1+Code:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Noto+Serif+JP:wght@400;600&family=M+PLUS+1+Code:wght@400&display=swap');
 
-body {
-    font-family: 'Noto Serif JP', serif;
-    color: #2a1a0e;
-    font-size: 16px;
+/* ── Design Tokens (mirrors index.css) ──────────────────────────── */
+:root {
+    --ink:        #1a1410;
+    --ink-60:     #5a5249;
+    --ink-35:     #8a8178;
+    --paper:      #f5f0e8;
+    --surface:    rgba(250, 248, 244, 0.93);
+    --indigo:     #1e3358;
+    --accent:     #b84920;
+    --ease-expo:  cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-quart: cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-/* Override the table's inline font-size: small */
+/* ── Base ────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+    font-family: 'EB Garamond', 'Noto Serif JP', serif;
+    font-size: 1.0625rem;
+    line-height: 1.75;
+    color: var(--ink);
+    background-color: var(--paper) !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+    background: var(--accent);
+    color: #fff8f2;
+}
+
+/* ── Table Overrides (legacy layout) ────────────────────────────── */
 table {
-    font-family: 'Noto Serif JP', serif !important;
-    font-size: 16px !important;
-    color: #2a1a0e;
+    font-family: 'EB Garamond', 'Noto Serif JP', serif !important;
+    font-size: 1.0625rem !important;
+    color: var(--ink);
+    /* Remove the repeated background-image set inline on each table */
+    background-image: none !important;
+    background-color: transparent !important;
 }
 
 td {
-    font-family: 'Noto Serif JP', serif;
-    color: #2a1a0e;
+    font-family: 'EB Garamond', 'Noto Serif JP', serif;
+    color: var(--ink);
+    vertical-align: top;
 }
 
-/* Links: match index accent */
+
+/* ── Links ───────────────────────────────────────────────────────── */
 a {
-    color: #1a6dbf;
+    color: var(--indigo);
     transition: color 0.15s;
+    text-underline-position: from-font;
+    text-decoration-thickness: from-font;
 }
 
-a:visited {
-    color: #6b4a9e;
-}
+a:visited { color: var(--ink-60); }
 
-/* Override the vintage 2002-era position-shift hover */
+/* Kill the 2002-era position-shift hover */
 a:hover {
     position: static !important;
     top: auto !important;
     left: auto !important;
-    color: #0f4a8a;
+    color: var(--accent);
 }
 
-/* Branded selection color (matches index) */
-::selection {
-    background: #4a90e2;
-    color: #fff;
+a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 2px;
 }
 
-/* Chapter title h2 */
+/* ── Typography ──────────────────────────────────────────────────── */
 h2 {
-    font-family: 'Noto Serif JP', serif;
-    font-size: 1.4rem;
-    color: #1a3a5c;
-    margin-bottom: 16px;
+    font-family: 'EB Garamond', serif;
+    font-size: 1.45rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    color: var(--indigo);
+    margin: 12px 0 14px;
+    text-wrap: balance;
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
-/* Body text rhythm */
+h2::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 1.15em;
+    background: var(--accent);
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
 p {
     line-height: 1.75;
     margin-bottom: 1em;
+    text-wrap: pretty;
 }
 
-/*
- * Move notation — monospaced Japanese font so ▲/▽ and kanji align vertically.
- * Covers both formats used across tactics pages:
- *   - <ul><li>move</li></ul>  (most pages)
- *   - <div style="margin-bottom:1em">move<br></div>  (some pages)
- */
+/* Figure captions ("Figure 1", "Diagram 2", etc.) */
+td > small {
+    font-family: 'EB Garamond', serif;
+    font-size: 0.875rem;
+    font-style: italic;
+    color: var(--ink-35);
+    letter-spacing: 0.01em;
+    display: block;
+    margin-bottom: 4px;
+}
+
+/* ── Move Notation ───────────────────────────────────────────────── */
 td[valign="top"] ul,
 td[valign="top"] ul li,
 td[valign="top"] div[style] {
     font-family: 'M PLUS 1 Code', 'Courier New', monospace;
-    font-size: 0.95rem;
+    font-size: 0.93rem;
     line-height: 1.8;
+    color: var(--ink);
+}
+
+/* ── Board iframe ────────────────────────────────────────────────── */
+iframe[width="580px"] {
+    width: 100% !important;
+    min-width: 300px;
+    height: auto !important;
+    aspect-ratio: 580 / 498;
+    display: block;
+    border-radius: 3px;
+    outline: 1px solid rgba(0, 0, 0, 0.12);
+    margin-bottom: 16px;
+}
+
+/* ── Alignment Fix: leading <br> spacers ─────────────────────────── */
+/* Legacy pages use <br> as top padding inside tds; hide them so the
+   text column aligns flush with the top of the iframe column. */
+td[width="580"] > br:first-child,
+td[width="700"] > br:first-child,
+td[width="350"][valign="top"] > br:first-child,
+td[width="580"] > br:first-child + br,
+td[width="700"] > br:first-child + br,
+td[width="350"][valign="top"] > br:first-child + br {
+    display: none;
+}
+
+/* ── Responsive Table ────────────────────────────────────────────── */
+table[width="980"] {
+    width: 100% !important;
+    max-width: 980px;
+    margin-inline: auto !important;
+}
+
+/* ── Navigation Images ───────────────────────────────────────────── */
+a img {
+    transition: opacity 0.15s var(--ease-quart);
+    display: block;
+}
+
+a:hover img { opacity: 0.82; }
+
+a:active img { opacity: 0.65; }
+
+/* Chapter title banner */
+td img[src*="title"] {
+    outline: 1px solid rgba(0, 0, 0, 0.10);
+    border-radius: 2px;
+}
+
+/* ── Nav Text Labels (via :has) ──────────────────────────────────── */
+a:has(img[src*="top.png"]),
+a:has(img[src*="left.png"]),
+a:has(img[src*="right.png"]),
+a:has(img[src*="pagetop.png"]) {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    padding: 6px 10px;
+    border-radius: 3px;
+    text-decoration: none;
+    transition: background 0.15s var(--ease-quart);
+}
+
+a:has(img[src*="top.png"]):hover,
+a:has(img[src*="left.png"]):hover,
+a:has(img[src*="right.png"]):hover,
+a:has(img[src*="pagetop.png"]):hover {
+    background: rgba(30, 51, 88, 0.08);
+}
+
+a:has(img[src*="top.png"])::after    { content: "Index"; }
+a:has(img[src*="left.png"])::after   { content: "← Prev"; }
+a:has(img[src*="right.png"])::after  { content: "Next →"; }
+a:has(img[src*="pagetop.png"])::after { content: "↑ Top"; }
+
+a:has(img[src*="top.png"])::after,
+a:has(img[src*="left.png"])::after,
+a:has(img[src*="right.png"])::after,
+a:has(img[src*="pagetop.png"])::after {
+    font-family: 'EB Garamond', serif;
+    font-size: 0.72rem;
+    font-style: italic;
+    color: var(--ink-60);
+    letter-spacing: 0.03em;
+}
+
+/* ── Reduced Motion ──────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
+
+/* ── Mobile ──────────────────────────────────────────────────────── */
+@media (max-width: 800px) {
+    table[width="980"],
+    table[width="980"] tbody,
+    table[width="980"] tr {
+        display: block !important;
+        width: 100% !important;
+    }
+
+    table[width="980"] td[width="30"],
+    table[width="980"] td[width="5"],
+    table[width="980"] td[width="15"],
+    table[width="980"] td[width="10"] {
+        display: none !important;
+    }
+
+    table[width="980"] td {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box;
+    }
+
+    iframe[width="580px"] {
+        min-width: 0;
+    }
 }
