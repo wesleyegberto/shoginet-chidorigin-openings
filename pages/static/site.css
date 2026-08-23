@@ -131,7 +131,7 @@ td[valign="top"] div[style] {
 
 /* ── Board iframe ────────────────────────────────────────────────── */
 iframe[width="580px"] {
-    width: 100% !important;
+    width: 580px;
     min-width: 300px;
     height: auto !important;
     aspect-ratio: 580 / 498;
@@ -172,6 +172,9 @@ a:active img { opacity: 0.65; }
 
 /* Chapter title banner */
 td img[src*="title"] {
+    max-width: 100%;
+    height: auto;
+    display: block;
     outline: 1px solid rgba(0, 0, 0, 0.10);
     border-radius: 2px;
 }
@@ -212,6 +215,18 @@ a:has(img[src*="pagetop.png"])::after {
     font-style: italic;
     color: var(--ink-60);
     letter-spacing: 0.03em;
+}
+
+/* ── Move Notation (wrapped by site.js) ─────────────────────────── */
+code.move-notation {
+    display: block;
+    font-family: 'M PLUS 1 Code', 'Courier New', monospace;
+    font-size: 0.9rem;
+    line-height: 1.9;
+    color: var(--ink);
+    letter-spacing: 0.01em;
+    margin: 0;
+    padding: 0;
 }
 
 /* ── Reduced Motion ──────────────────────────────────────────────── */
